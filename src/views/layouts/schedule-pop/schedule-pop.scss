@@ -1,0 +1,48 @@
+.correctReport {
+  .modal-dialog {
+    margin-top: 144px;
+    max-width: 1130px;
+  }
+  .accordion .card-body {
+    margin-top: 0px;
+  }
+  .modal-content {
+    border-radius: 11px;
+  }
+  .close {
+    position: absolute;
+    content: "";
+    top: 22px;
+    right: 23px;
+    z-index: 2;
+  }
+  &-title {
+    display: none;
+  }
+}
+
+.modal-open .modal.correctReport {
+  padding-left: 4px;
+}
+
+@media (max-width: 991px) {
+  .correctReport-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 22px;
+    color: #000000;
+    min-height: 76px;
+  }
+  .correctReport {
+    .close {
+      top: 16px;
+      right: 17px;
+    }
+    .modal-dialog {
+      margin-top: 77px;
+    }
+  }
+}

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Вакансии / Резюме - Личный кабинет HR</title>
+    <link rel="icon" type="image/png" href="image/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="image/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="image/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__topline">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-9 d-flex align-items-center d-lg-block">
+              <button class="main-menu-show d-lg-none hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="main-logo" href="javascript:void(0);"><img src="image/main-logo.svg" alt="#"></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-5 d-none d-lg-block">
+              <div class="help-contact"><span>У вас есть вопросы?</span><span class="help-contact__dash"></span><a href="mailto:info@mebot24-hr.ru">info@mebot24-hr.ru</a></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-3">
+              <div id="selectVue">
+                <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-3">
+              <div class="profile-display"><a class="profile-display__bttn" href="javascript:void(0);" data-letters="ИН"><span>Иванов Н.П.</span></a>
+                <div class="profile-block">
+                  <div class="profile-block__title">Иванов Н.П.</div>
+                  <div class="profile-block__btns"><a class="btn-correct profile__btn-transparent" href="/profile/">Редактировать профиль</a><a class="btn-out profile__btn-transparent" href="/?logout=yes">Выйти</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__navline d-none d-lg-block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <nav class="main-nav">
+                <ul class="main-menu">
+                  <li class="main-menu__item"><a class="main-menu__link" href="/">Главная</a></li>
+                  <li class="main-menu__item main-menu__item-vacancies"><a class="main-menu__link" href="/vacancy/">Вакансии</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="/company/">Компании</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="/">О системе</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-lg-4"><a class="other-products" href="javascript:void(0);">
+                Другие продукты<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu__block">
+        <nav class="mobile-menu" role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox">
+            <div class="number">5</div>
+            <div class="toggle-block"><span></span><span></span><span></span></div>
+            <div class="mobile" id="menu">
+              <div class="mobile-profile">
+                <div class="mobile-profile__column">
+                  <div class="mobile-profile__bg"><span>ИН</span></div>
+                </div>
+                <div class="mobile-profile__column">
+                  <div class="mobile-profile__name">
+                    <div class="mobile-profile__name-item">Иванов Н.П.</div><a class="mobile-profile__link" href="/fix-company.html">Редактировать профиль<span><img src="./image/arrow-right.svg" alt="#"></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile-block">
+                <div class="mobile-block__list">
+                  <div id="selectVue">
+                    <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+                  </div>
+                </div><a class="mobile-block__item" href="/"><span class="profile-icon"> <img src="./image/icon-1.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Главная</div></a><a class="mobile-block__item" href="/active&amp;archive.html"><span class="profile-icon"> <img src="./image/icon-2.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Вакансии</div><span class="mobile-number active">5</span></a><a class="mobile-block__item" href="/companies.html"><span class="profile-icon"> <img src="./image/icon-3.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Компании</div><span class="mobile-number">2</span></a><a class="mobile-block__item" href="javascript:void(0);"><span class="profile-icon"> <img src="./image/icon-4.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">О системе</div></a><a class="mobile-block__item" href="/login.html"><span class="profile-icon"> <img src="./image/icon-5.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Выход</div></a>
+              </div>
+              <div class="mobile-footer">
+                <div class="mobile-footer__logo"><img src="./image/footer-logo.svg" alt="#"></div><a class="mobile-footer__item mail" href="mailto:info@mebot24.ru"> <span><img src="./image/mail-footer.svg" alt="#"></span>info@mebot24.ru</a><a class="mobile-footer__item tel" href="tel:+84951183619"> <span><img src="./image/tel-footer.svg" alt="#"></span>8 (495)-118-36-19</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="collapse-overlay"></div>
+        <div id="selectVue">
+          <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="info-system-bar" id="sticky">
+        <div class="info-system-bar__navline">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-5 col-lg-6 col-12">
+                <h1 class="info-system-bar__title">Руководитель отдела продаж<span class="info-system-bar__btn"><img src="./image/btn-bottom.svg" alt="#"></span>
+                  <ul class="info-system-bar__list"><a class="info-system-bar__list-link" href="#">
+                      <li class="info-system-bar__list-item">Менеджер по продажам</li></a><a class="info-system-bar__list-link" href="#">
+                      <li class="info-system-bar__list-item">Продуктовый дизайнер</li></a><a class="info-system-bar__list-link" href="#">
+                      <li class="info-system-bar__list-item">HR-директор</li></a><a class="info-system-bar__list-link" href="#">
+                      <li class="info-system-bar__list-item">Руководитель отдела продаж</li></a></ul>
+                </h1>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-12"><a class="dflt-bttn" href="javascript:void(0);">
+                  Запустить найм<svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-3.11727e-07 1.86852L-7.84686e-08 7.20485C-4.42203e-08 7.98836 0.860163 8.46752 1.52635 8.05511L5.67684 5.48577C6.29591 5.10253 6.31099 4.20733 5.70518 3.80345L1.5547 1.03647C0.890145 0.59343 -3.46639e-07 1.06982 -3.11727e-07 1.86852Z" fill="black"/>
+</svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="info-system-bar__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7 col-md-12">
+                <div class="statistic-display">
+                  <div class="statistic-display__heading">
+                    <div class="statistic-display__icon"><img src="image/statistic-display-heading-icon.svg" alt="#"></div>
+                    <div class="statistic-display__info">
+                      <h3 class="statistic-display__title">Статистика с 1 по 31 октября</h3><a class="statistic-display__change-date" href="javascript:void(0);" data-toggle="modal" data-target="#changeDate" type="button">
+                        Изменить дату<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                    </div>
+                  </div>
+                  <ul class="statistic-display__list">
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 100%; background: #FFD441"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FFD441"></span><span class="statistic-display-list-item__title">Резюме</span><span class="statistic-display-list-item__count"><span>1 200 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 87%; background: #FFBF41"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FFBF41"></span><span class="statistic-display-list-item__title">Связались</span><span class="statistic-display-list-item__count"><span>900 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 75%; background: #FFAC41"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FFAC41"></span><span class="statistic-display-list-item__title">Заинтересованы</span><span class="statistic-display-list-item__count"><span>600 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 50%; background: #FF9A41"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FF9A41"></span><span class="statistic-display-list-item__title">Тестирование</span><span class="statistic-display-list-item__count"><span>300 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 40%; background: #FF8841"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FF8841"></span><span class="statistic-display-list-item__title">Собеседование</span><span class="statistic-display-list-item__count"><span>100 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 25%; background: #FF6F41"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FF6F41"></span><span class="statistic-display-list-item__title">Выход на работу</span><span class="statistic-display-list-item__count"><span>20 </span>чел.</span></span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                <div class="nearest-interviews">
+                  <div class="nearest-interviews__heading">
+                    <div class="nearest-interviews__icon"><img src="image/nearest-interviews-heading-icon.svg" alt="#"></div>
+                    <div class="nearest-interviews__info">
+                      <h3 class="nearest-interviews__title">Ближайшие собеседования</h3><a class="nearest-interviews__show-more" href="/vacancy-schedule.html">
+                        Смотреть все собеседования<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                      <div class="dflt-schedule">
+                        <div class="dflt-schedule__heading"><span>Сегодня</span></div>
+                        <div class="dflt-schedule__content">
+                          <div class="dflt-schedule__column">
+                            <div class="dflt-schedule__row"><span>15:00</span><span>3 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>17:00</span><span>5 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>18:00</span><span>3 чел.</span></div>
+                          </div>
+                          <div class="dflt-schedule__separator"></div>
+                          <div class="dflt-schedule__column">
+                            <div class="dflt-schedule__row"><span>19:00</span><span>0 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>20:00</span><span>5 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>16:00</span><span>3 чел.</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 d-none d-lg-block">
+                      <div class="dflt-schedule dflt-schedule_ghost">
+                        <div class="dflt-schedule__heading"><span>Завтра</span></div>
+                        <div class="dflt-schedule__content">
+                          <div class="dflt-schedule__column">
+                            <div class="dflt-schedule__row"><span>15:00</span><span>3 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>17:00</span><span>5 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>18:00</span><span>3 чел.</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-system-section">
+        <div class="content-system-section__navline">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <ul class="content-system-section__switch">
+                  <li><a href="/vacancy-resume.html"><span>Резюме</span></a></li>
+                  <li><a href="/worksheet.html"><span>Анкеты</span></a></li>
+                  <li><a href="/vacancy-schedule.html"><span>График собеседований</span></a></li>
+                  <li><a href="/vacancy-info.html"><span>О вакансии</span></a></li>
+                  <li><a href="javascript:void(0);"><span>Действия</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-system-section__content">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-2">
+                <h2 class="content-system-section__title">Резюме</h2>
+              </div>
+              <div class="col-lg-5">
+                <form class="dflt-search" action="#">
+                  <input type="text" name="search" placeholder="Иванов Иван Петрович">
+                  <button type="submit"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4586 10.0193L7.84054 7.29639C8.51367 6.49619 8.88249 5.48938 8.88249 4.44125C8.88249 1.99238 6.89011 0 4.44125 0C1.99238 0 0 1.99238 0 4.44125C0 6.89011 1.99238 8.88249 4.44125 8.88249C5.36058 8.88249 6.23667 8.6052 6.98569 8.07882L9.6236 10.8224C9.73386 10.9369 9.88216 11 10.0411 11C10.1915 11 10.3342 10.9427 10.4425 10.8384C10.6727 10.6169 10.68 10.2496 10.4586 10.0193ZM4.44125 1.15859C6.25134 1.15859 7.72391 2.63115 7.72391 4.44125C7.72391 6.25134 6.25134 7.72391 4.44125 7.72391C2.63115 7.72391 1.15859 6.25134 1.15859 4.44125C1.15859 2.63115 2.63115 1.15859 4.44125 1.15859Z" fill="#828282"/>
+</svg>
+                  </button>
+                </form>
+              </div>
+              <div class="col-lg-5 text-lg-right">
+                <div class="copple-btns"><a class="dflt-bttn dflt-bttn_action" data-toggle="modal" data-target="#addResume" type="button">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.80117 3.83526C9.66855 3.70267 9.50748 3.6364 9.31815 3.6364H6.36357V0.681751C6.36357 0.49242 6.29725 0.331398 6.16471 0.198809C6.03215 0.0663194 5.87125 0 5.68164 0H4.31813C4.12878 0 3.96778 0.0662448 3.83519 0.198834C3.7026 0.331423 3.63633 0.492445 3.63633 0.681776V3.63642H0.681778C0.492446 3.63642 0.331424 3.70269 0.198834 3.83528C0.0662449 3.96787 0 4.12874 0 4.3182V5.68188C0 5.87138 0.0662201 6.03228 0.198809 6.16474C0.331399 6.29738 0.492422 6.3636 0.681753 6.3636H3.63631V9.3183C3.63631 9.50763 3.70258 9.66878 3.83517 9.80132C3.96776 9.93378 4.12875 10 4.31811 10H5.68172C5.8712 10 6.03212 9.93378 6.16473 9.80132C6.29737 9.6687 6.36359 9.50763 6.36359 9.3183V6.3636H9.31812C9.50763 6.3636 9.6686 6.29738 9.80114 6.16474C9.9337 6.03228 10 5.87138 10 5.68188V4.3182C9.99995 4.12874 9.9338 3.96777 9.80117 3.83526Z" fill="#CDCEDE"/>
+</svg>Добавить кандидата</a>
+                  <div class="dflt-bttn_action-list"><a class="dflt-bttn dflt-bttn_action dflt-bttn__import mr-0">
+                      <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.98167 6.0979C9.94449 6.01223 9.85774 5.95633 9.76146 5.95633H7.14987V0.229097C7.14987 0.102639 7.04309 0 6.91153 0H3.09827C2.96671 0 2.85994 0.102639 2.85994 0.229097V5.95635H0.238333C0.142056 5.95635 0.0552975 6.01225 0.0181183 6.09747C-0.0185917 6.18315 0.00142778 6.28166 0.0695971 6.34719L4.82424 10.9326C4.86904 10.9757 4.92959 11 4.99298 11C5.05637 11 5.11692 10.9757 5.16172 10.9331L9.93019 6.34764C9.99836 6.28209 10.0189 6.1836 9.98167 6.0979Z" fill="#CDCEDE"/>
+</svg>Импорт списка</a>
+                    <div class="dflt-bttn_action-block">
+                      <div class="dflt-bttn_action-block__title">Импорт списка</div>
+                      <div class="dflt-bttn_action-block__desc">Загружать файл в формате (csv)</div><a class="dflt-bttn_action-block__desc dflt-bttn_action-block__link" href="javascript:void(0);">Скачать пример файла</a><a class="dflt-bttn__download" href="javascript:void(0);"><img src="./image/download-icon.svg" alt="#">перенести файл</a><a class="dflt-bttn" href="javascript:void(0);">Скачать</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-system-section__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="resume-total-count">Всего: <span>1789 </span>резюме</div>
+                <div class="resume-table">
+                  <div class="resume-table__heading"><span>ФИО</span><span>Возраст</span><span>Добавлено</span><span>Изменено</span><span>Ссылка</span></div>
+                  <ul class="resume-table__list">
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="resume-table-list-item">
+                      <div class="resume-table-list-item__info"><span>Власова Екатерина Петрововна</span><span>22 года</span><span>10.11 2019</span><span>20.11 2019</span><span> <a href="javascript:void(0);" target="_blank">hh.ru</a></span></div>
+                      <div class="resume-table-list-item__action">
+                        <div class="dflt-select dflt-select_mouseover"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                          <ul class="dflt-select__dropdown">
+                            <li><a href="javascript:void(0);">Пригласить <br>на должность</a></li>
+                            <li><a href="javascript:void(0);">Тестировать</a></li>
+                            <li><a href="javascript:void(0);">Собеседовать</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="resume-page-nav">
+                  <div class="row align-items-center">
+                    <div class="col-lg-4 offset-lg-4"><a class="dflt-bttn resume-page-nav__go-next" href="javascript:void(0);">Следующая страница</a></div>
+                    <div class="col-lg-4">
+                      <div class="resume-page-nav__pagination">
+                        <button class="resume-page-nav__pagination-prev disabled" type="button"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 1C4.68 1.32 2.2 3.8 1 5L5 9" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </button>
+                        <input class="resume-page-nav__pagination-input" type="text" name="page" value="1">
+                        <button class="resume-page-nav__pagination-next" type="button"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </button>
+                        <div class="resume-page-nav__pagination-count"><span>из 59</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="fixed-nav">
+      <div class="fixed-nav__bar"><a class="fixed-nav__bar-bttn" href="javascript:void(0);"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.8145 0.240629C14.5148 -0.0802096 14.016 -0.0802096 13.7058 0.240629C13.4061 0.550628 13.4061 1.06657 13.7058 1.37585L19.3277 7.19068H0.776183C0.343728 7.1914 0 7.54693 0 7.99422C0 8.44151 0.343728 8.8086 0.776183 8.8086H19.3277L13.7058 14.6126C13.4061 14.9334 13.4061 15.4501 13.7058 15.7594C14.016 16.0802 14.5155 16.0802 14.8145 15.7594L21.7674 8.56797C22.0775 8.25797 22.0775 7.74203 21.7674 7.43275L14.8145 0.240629Z" fill="#828282"/>
+</svg></a>
+        <div class="fixed-nav__bar-element fixed-nav__bar-element_1" data-count="5"><span>Вакансии</span></div>
+      </div>
+      <div class="fixed-nav__content">
+        <div class="vacancy-display vacancy-display_2">
+          <div class="vacancy-display__heading">
+            <h3 class="vacancy-display__title"><span>Вакансии</span></h3>
+            <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Все вакансии</a>
+              <ul class="dflt-select__dropdown">
+                <li><a href="javascript:void(0);">Все вакансии</a></li>
+                <li><a href="javascript:void(0);">Только активные</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="vacancy-display__list scroll-wrapper" id="fixedNavVacancy">
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">Р</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Руководитель отдела продаж </span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          </ul><a class="dflt-bttn" href="/no-vacancy.html">
+            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Создать вакансию</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('load', function() {
+      	const fixedNavVacancyWrapper = document.querySelector('#fixedNavVacancy');
+      	const fixedNavVacancyScroll = new PerfectScrollbar(fixedNavVacancyWrapper, {
+      		suppressScrollX: true
+      	});
+      });
+    </script>
+    <div class="modal fade calendar" id="changeDate" tabindex="-1" role="dialog" aria-labelledby="changeDateLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></button>
+          <div class="modal-body">
+            <form class="calendar__form" action="#"></form>
+            <label class="calendar__title" for="date">Дата статистики</label>
+            <input class="custom-calendar" id="date" type="text" name="date" placeholder="23/01/2020">
+            <button class="new-account__row-btn" type="submit">Изменить даты</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade addResume" id="addResume" tabindex="-1" role="dialog" aria-labelledby="addResumeLabel" aria-hidden="true">
+      <div class="modal-dialog big" role="document">
+        <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></button>
+          <div class="modal-body">
+            <div class="addEvent-title">Добавить резюме</div>
+            <div class="row addResume-btns">
+              <div class="col-lg-6 col-md-6 col-6"><a class="btn btn-primary btn-primary__addResume show" data-toggle="collapse" data-target="#multiCollapseExample4" role="button" data-addclass="small" aria-expanded="false" aria-controls="multiCollapseExample4"> <span class="desktop">Добавить одно</span><span class="mobile">Одно</span></a></div>
+              <div class="col-lg-6 col-md-6 col-6"><a class="btn btn-primary btn-primary__addResume" data-toggle="collapse" data-target="#multiCollapseExample3" role="button" data-addclass="big" aria-expanded="true" aria-controls="multiCollapseExample3"> <span class="desktop">Добавить несколько</span><span class="mobile">Несколько</span></a></div>
+            </div>
+            <div class="collapse collapse-item addResume-first" id="multiCollapseExample4" data-parent="#addResume">
+              <div class="row addResume-newPerson">
+                <div class="col-lg-12">
+                  <label class="addResume-title" for="name">ФИО</label>
+                  <input class="dflt-input" id="name" type="text" name="name" placeholder="Иванов Иван Иванович">
+                </div>
+              </div>
+              <div class="row addResume-newPerson">
+                <div class="col-lg-4">
+                  <label class="addResume-title" for="mail">E-mail</label>
+                  <input class="dflt-input" id="mail" type="text" name="email" placeholder="info@mebot24-hr.ru">
+                </div>
+                <div class="col-lg-4">
+                  <label class="addResume-title" for="tel">Телефон</label>
+                  <input class="dflt-input dflt-input_phone" id="tel" type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="col-lg-4">
+                  <label class="addResume-title" for="eventDate">Дата рождения</label>
+                  <div class="addEvent-block addEvent-block__date">
+                    <input class="addEvent-block__input" id="eventDate" type="text" name="addEvent-date" placeholder="12.12.2020">
+                  </div>
+                </div>
+              </div>
+              <div class="row addResume-newPerson">
+                <div class="col-lg-12">
+                  <label class="addResume-title" for="link">Ссылка на резюме</label>
+                  <input class="dflt-input" id="link" type="text" name="link" placeholder="https://rabota.ua">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12"><a class="dflt-bttn" href="javascript:void(0);">Добавить резюме</a></div>
+              </div>
+            </div>
+            <div class="collapse collapse-item show" id="multiCollapseExample3" data-parent="#addResume">
+              <div class="row addResume-newPerson__title"> 
+                <div class="col-lg-12">
+                  <div class="addResume-newPerson__name">Резюме 1</div>
+                </div>
+              </div>
+              <div class="row addResume-newPerson">
+                <div class="col-lg-2 col-xl-4 col-md-6">
+                  <label class="addResume-title" for="name">ФИО</label>
+                  <input class="dflt-input" id="name" type="text" name="name" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="col-lg-2 col-xl-2 col-md-6">
+                  <label class="addResume-title" for="eventDate">Дата рождения</label>
+                  <div class="addEvent-block addEvent-block__date">
+                    <input class="addEvent-block__input" id="eventDate" type="text" name="addEvent-date" placeholder="12.12.2020">
+                  </div>
+                </div>
+                <div class="col-lg-3 col-xl-2 col-md-6">
+                  <label class="addResume-title" for="tel">Телефон</label>
+                  <input class="dflt-input dflt-input_phone" id="tel" type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="col-lg-2 col-md-6">
+                  <label class="addResume-title" for="mail">E-mail</label>
+                  <input class="dflt-input" id="mail" type="text" name="email" placeholder="info@mebot24-hr.ru">
+                </div>
+                <div class="col-lg-3 col-xl-2 col-md-12">
+                  <label class="addResume-title" for="link">Ссылка на резюме</label>
+                  <input class="dflt-input" id="link" type="text" name="link" placeholder="https://rabota.ua">
+                </div>
+              </div>
+              <div class="row addResume-newPerson__title"> 
+                <div class="col-lg-12">
+                  <div class="addResume-newPerson__name">Резюме 2</div>
+                </div>
+              </div>
+              <div class="row addResume-newPerson">
+                <div class="col-lg-2 col-xl-4 col-md-6">
+                  <label class="addResume-title" for="name">ФИО</label>
+                  <input class="dflt-input" id="name" type="text" name="name" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="col-lg-2 col-xl-2 col-md-6">
+                  <label class="addResume-title" for="eventDate">Дата рождения</label>
+                  <div class="addEvent-block addEvent-block__date">
+                    <input class="addEvent-block__input" id="eventDate" type="text" name="addEvent-date" placeholder="12.12.2020">
+                  </div>
+                </div>
+                <div class="col-lg-3 col-xl-2 col-md-6">
+                  <label class="addResume-title" for="tel">Телефон</label>
+                  <input class="dflt-input dflt-input_phone" id="tel" type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="col-lg-2 col-md-6">
+                  <label class="addResume-title" for="mail">E-mail</label>
+                  <input class="dflt-input" id="mail" type="text" name="email" placeholder="info@mebot24-hr.ru">
+                </div>
+                <div class="col-lg-3 col-xl-2 col-md-12">
+                  <label class="addResume-title" for="link">Ссылка на резюме</label>
+                  <input class="dflt-input" id="link" type="text" name="link" placeholder="https://rabota.ua">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12"><a class="addResume-newRow" href="javascript:void(0);">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="6.95674" cy="7" rx="6.95674" ry="7" fill="#CDCEDE"/>
+<path d="M6.95639 5V9M8.94403 7L4.96875 7" stroke="#F3F3F7" stroke-width="1.5" stroke-linecap="round"/>
+</svg>Добавить еще одно</a></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12"><a class="dflt-bttn" href="javascript:void(0);">Добавить все резюме</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

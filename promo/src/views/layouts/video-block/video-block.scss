@@ -1,0 +1,40 @@
+.video-block {
+  padding-top: 54px;
+  padding-bottom: 112px;
+  background: #e1e2f2;
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #333333;
+  }
+  video {
+    width: 100%;
+    min-height: 636px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .video-block video {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-block {
+    padding: 50px 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-block__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}

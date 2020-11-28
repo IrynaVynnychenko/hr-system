@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Активные / архивные вакансии - Личный кабинет HR</title>
+    <link rel="icon" type="image/png" href="image/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="image/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="image/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__topline">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-9 d-flex align-items-center d-lg-block">
+              <button class="main-menu-show d-lg-none hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="main-logo" href="javascript:void(0);"><img src="image/main-logo.svg" alt="#"></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-5 d-none d-lg-block">
+              <div class="help-contact"><span>У вас есть вопросы?</span><span class="help-contact__dash"></span><a href="mailto:info@mebot24-hr.ru">info@mebot24-hr.ru</a></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-3">
+              <div id="selectVue">
+                <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-3">
+              <div class="profile-display"><a class="profile-display__bttn" href="javascript:void(0);" data-letters="ИН"><span>Иванов Н.П.</span></a>
+                <div class="profile-block">
+                  <div class="profile-block__title">Иванов Н.П.</div>
+                  <div class="profile-block__btns"><a class="btn-correct profile__btn-transparent" href="/profile/">Редактировать профиль</a><a class="btn-out profile__btn-transparent" href="/?logout=yes">Выйти</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__navline d-none d-lg-block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <nav class="main-nav">
+                <ul class="main-menu">
+                  <li class="main-menu__item"><a class="main-menu__link" href="/">Главная</a></li>
+                  <li class="main-menu__item main-menu__item-vacancies"><a class="main-menu__link" href="/vacancy/">Вакансии</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="/company/">Компании</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="/">О системе</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-lg-4"><a class="other-products" href="javascript:void(0);">
+                Другие продукты<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu__block">
+        <nav class="mobile-menu" role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox">
+            <div class="number">5</div>
+            <div class="toggle-block"><span></span><span></span><span></span></div>
+            <div class="mobile" id="menu">
+              <div class="mobile-profile">
+                <div class="mobile-profile__column">
+                  <div class="mobile-profile__bg"><span>ИН</span></div>
+                </div>
+                <div class="mobile-profile__column">
+                  <div class="mobile-profile__name">
+                    <div class="mobile-profile__name-item">Иванов Н.П.</div><a class="mobile-profile__link" href="/fix-company.html">Редактировать профиль<span><img src="./image/arrow-right.svg" alt="#"></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile-block">
+                <div class="mobile-block__list">
+                  <div id="selectVue">
+                    <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+                  </div>
+                </div><a class="mobile-block__item" href="/"><span class="profile-icon"> <img src="./image/icon-1.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Главная</div></a><a class="mobile-block__item" href="/active&amp;archive.html"><span class="profile-icon"> <img src="./image/icon-2.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Вакансии</div><span class="mobile-number active">5</span></a><a class="mobile-block__item" href="/companies.html"><span class="profile-icon"> <img src="./image/icon-3.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Компании</div><span class="mobile-number">2</span></a><a class="mobile-block__item" href="javascript:void(0);"><span class="profile-icon"> <img src="./image/icon-4.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">О системе</div></a><a class="mobile-block__item" href="/login.html"><span class="profile-icon"> <img src="./image/icon-5.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Выход</div></a>
+              </div>
+              <div class="mobile-footer">
+                <div class="mobile-footer__logo"><img src="./image/footer-logo.svg" alt="#"></div><a class="mobile-footer__item mail" href="mailto:info@mebot24.ru"> <span><img src="./image/mail-footer.svg" alt="#"></span>info@mebot24.ru</a><a class="mobile-footer__item tel" href="tel:+84951183619"> <span><img src="./image/tel-footer.svg" alt="#"></span>8 (495)-118-36-19</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="collapse-overlay"></div>
+        <div id="selectVue">
+          <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+        </div>
+      </div>
+    </header>
+    <div class="fixed-nav">
+      <div class="fixed-nav__bar"><a class="fixed-nav__bar-bttn" href="javascript:void(0);"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.8145 0.240629C14.5148 -0.0802096 14.016 -0.0802096 13.7058 0.240629C13.4061 0.550628 13.4061 1.06657 13.7058 1.37585L19.3277 7.19068H0.776183C0.343728 7.1914 0 7.54693 0 7.99422C0 8.44151 0.343728 8.8086 0.776183 8.8086H19.3277L13.7058 14.6126C13.4061 14.9334 13.4061 15.4501 13.7058 15.7594C14.016 16.0802 14.5155 16.0802 14.8145 15.7594L21.7674 8.56797C22.0775 8.25797 22.0775 7.74203 21.7674 7.43275L14.8145 0.240629Z" fill="#828282"/>
+</svg></a>
+        <div class="fixed-nav__bar-element fixed-nav__bar-element_1" data-count="5"><span>Вакансии</span></div>
+      </div>
+      <div class="fixed-nav__content">
+        <div class="vacancy-display vacancy-display_2">
+          <div class="vacancy-display__heading">
+            <h3 class="vacancy-display__title"><span>Вакансии</span></h3>
+            <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Все вакансии</a>
+              <ul class="dflt-select__dropdown">
+                <li><a href="javascript:void(0);">Все вакансии</a></li>
+                <li><a href="javascript:void(0);">Только активные</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="vacancy-display__list scroll-wrapper" id="fixedNavVacancy">
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">Р</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Руководитель отдела продаж </span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          </ul><a class="dflt-bttn" href="/no-vacancy.html">
+            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Создать вакансию</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('load', function() {
+      	const fixedNavVacancyWrapper = document.querySelector('#fixedNavVacancy');
+      	const fixedNavVacancyScroll = new PerfectScrollbar(fixedNavVacancyWrapper, {
+      		suppressScrollX: true
+      	});
+      });
+    </script>
+    <main class="main">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="accordion-types">
+                <!-- active&archive.scss--><a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                   <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="13" cy="13" r="12.48" transform="rotate(-90 13 13)" stroke="#BDBDBD" stroke-width="1.04"/>
+<path d="M9 14C9.32 13.68 11.8 11.2 13 10L17 14" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Актуальные вакансии</a>
+                <div class="collapse multi-collapse actual-main" id="multiCollapseExample1">
+                  <div class="card card-body"> <a class="dflt-bttn dflt-bttn__top" href="/no-vacancy.html">
+                      <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Добавить вакансию	</a>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-7 col-md-9 col-9">
+                          <div class="card-block__name">Руководитель отдела продаж</div>
+                        </div>
+                        <div class="col-lg-5 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title">Активная</div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="activeVacancies" type="checkbox" checked>
+                              <label class="custom-control-label" for="activeVacancies"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-7">
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Резюме: </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">1000</div>
+                            </div>
+                          </div>
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Анкеты</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">300</div>
+                            </div>
+                          </div>
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Собеседования:</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">25</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="details-btns"><a class="btn-details btn-mobile" href="/vacancy-info.html">Подробнее</a><a class="dflt-bttn btn-mobile" href="javascript:void(0);">Запустить найм</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-7 col-md-9 col-9">
+                          <div class="card-block__name">Руководитель отдела продаж</div>
+                        </div>
+                        <div class="col-lg-5 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title">Активная</div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="activeVacancies2" type="checkbox" checked>
+                              <label class="custom-control-label" for="activeVacancies2"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-7">
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Резюме: </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">1000</div>
+                            </div>
+                          </div>
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Анкеты</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">300</div>
+                            </div>
+                          </div>
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Собеседования:</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">25</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="details-btns"><a class="btn-details btn-mobile" href="/vacancy-info.html">Подробнее</a><a class="dflt-bttn btn-mobile" href="javascript:void(0);">Запустить найм</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-7 col-md-9 col-9">
+                          <div class="card-block__name">Руководитель отдела продаж</div>
+                        </div>
+                        <div class="col-lg-5 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title">Активная</div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="activeVacancies3" type="checkbox" checked>
+                              <label class="custom-control-label" for="activeVacancies3"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-7">
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Резюме: </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">1000</div>
+                            </div>
+                          </div>
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Анкеты</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">300</div>
+                            </div>
+                          </div>
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Собеседования:</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">25</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="details-btns"><a class="btn-details btn-mobile" href="/vacancy-info.html">Подробнее</a><a class="dflt-bttn btn-mobile" href="javascript:void(0);">Запустить найм</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-7 col-md-9 col-9">
+                          <div class="card-block__name">Руководитель отдела продаж</div>
+                        </div>
+                        <div class="col-lg-5 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title">Активная</div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="activeVacancies4" type="checkbox" checked>
+                              <label class="custom-control-label" for="activeVacancies4"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-7">
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Резюме: </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">1000</div>
+                            </div>
+                          </div>
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Анкеты</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">300</div>
+                            </div>
+                          </div>
+                          <div class="row card-block__row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__title">Собеседования:</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                              <div class="card-block__number">25</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="details-btns"><a class="btn-details btn-mobile" href="/vacancy-info.html">Подробнее</a><a class="dflt-bttn btn-mobile" href="javascript:void(0);">Запустить найм</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="company-bottom__btn"><a class="btn-yellow btn-company" href="javascript:void(0);">Следующая страница</a>
+                      <div class="company-bottom__footer"><a class="btn-left btn-arrow" href="javascript:void(0);"><svg width="6" height="10" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 1C4.68 1.32 2.2 3.8 1 5L5 9" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                        <div class="company-bottom__numb">1</div><a class="btn-right btn-arrow" href="javascript:void(0);"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                        <div class="company-bottom__all">из<span>59</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- active&archive.scss-->
+                <button class="btn btn-primary archive-bttn" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                   <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="13" cy="13" r="12.48" transform="rotate(-90 13 13)" stroke="#BDBDBD" stroke-width="1.04"/>
+<path d="M9 14C9.32 13.68 11.8 11.2 13 10L17 14" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Архивные вакансии
+                </button>
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                  <div class="card card-body archive-body">
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="card-block__name">Менеджер по продажам</div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title"> </div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="archiveVacancies1" type="checkbox">
+                              <label class="custom-control-label" for="archiveVacancies1"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="archive-body__text">Перенесена в архив<span>12.12.2019</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="card-block__name">Менеджер по продажам</div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title"> </div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="archiveVacancies2" type="checkbox">
+                              <label class="custom-control-label" for="archiveVacancies2"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="archive-body__text">Перенесена в архив<span>12.12.2019</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="card-block__name">Менеджер по продажам</div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title"> </div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="archiveVacancies3" type="checkbox">
+                              <label class="custom-control-label" for="archiveVacancies3"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="archive-body__text">Перенесена в архив<span>12.12.2019</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="card-block__name">Менеджер по продажам</div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title"> </div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="archiveVacancies4" type="checkbox">
+                              <label class="custom-control-label" for="archiveVacancies4"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="archive-body__text">Перенесена в архив<span>12.12.2019</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="card-block__name">Менеджер по продажам</div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title"> </div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="archiveVacancies5" type="checkbox">
+                              <label class="custom-control-label" for="archiveVacancies5"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="archive-body__text">Перенесена в архив<span>12.12.2019</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-block"> 
+                      <div class="row first-row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="card-block__name">Менеджер по продажам</div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-3">
+                          <div class="custom-check">
+                            <div class="custom-check__title"> </div>
+                            <div class="custom-control custom-switch">
+                              <input class="custom-control-input" id="archiveVacancies6" type="checkbox">
+                              <label class="custom-control-label" for="archiveVacancies6"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-9 col-md-9 col-9">
+                          <div class="archive-body__text">Перенесена в архив<span>12.12.2019</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="company-bottom__btn"><a class="btn-yellow btn-company" href="javascript:void(0);">Следующая страница</a>
+                      <div class="company-bottom__footer"><a class="btn-left btn-arrow" href="javascript:void(0);"><svg width="6" height="10" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 1C4.68 1.32 2.2 3.8 1 5L5 9" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                        <div class="company-bottom__numb">1</div><a class="btn-right btn-arrow" href="javascript:void(0);"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                        <div class="company-bottom__all">из<span>59</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

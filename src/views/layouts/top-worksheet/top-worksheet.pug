@@ -1,0 +1,22 @@
+.info-system-bar#sticky
+    include ../info-system-bar/info-system-bar.pug
+
+.content-system-section
+    .content-system-section__navline
+        .container
+            .row
+                .col-lg-12
+                    include ../content-system-switch/content-system-switch.pug
+
+    .content-system-section__content
+        .container
+            .row.align-items-center
+                .col-lg-4
+                    h2.content-system-section__title Анкеты кандидатов
+                .col-lg-5
+                    form.dflt-search.dflt-search__ankets(action="#")
+                        input(type="text" name="search" placeholder="Иванов Иван Петрович")
+                        button(type="submit")
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4586 10.0193L7.84054 7.29639C8.51367 6.49619 8.88249 5.48938 8.88249 4.44125C8.88249 1.99238 6.89011 0 4.44125 0C1.99238 0 0 1.99238 0 4.44125C0 6.89011 1.99238 8.88249 4.44125 8.88249C5.36058 8.88249 6.23667 8.6052 6.98569 8.07882L9.6236 10.8224C9.73386 10.9369 9.88216 11 10.0411 11C10.1915 11 10.3342 10.9427 10.4425 10.8384C10.6727 10.6169 10.68 10.2496 10.4586 10.0193ZM4.44125 1.15859C6.25134 1.15859 7.72391 2.63115 7.72391 4.44125C7.72391 6.25134 6.25134 7.72391 4.44125 7.72391C2.63115 7.72391 1.15859 6.25134 1.15859 4.44125C1.15859 2.63115 2.63115 1.15859 4.44125 1.15859Z" fill="#828282"/>
+                            </svg>

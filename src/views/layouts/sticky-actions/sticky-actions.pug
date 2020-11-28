@@ -1,0 +1,182 @@
+.row
+    .col-lg-3
+        include ../sticky-menu/sticky-menu.pug
+    .col-lg-9
+        .sticky-right#automatic
+
+            .sticky-right__title Автоматическое управление
+
+            .sticky-radio
+                .dflt-radio
+                    input(type="radio" id="turn-on" name="AutoManagement")
+                    label(for="turn-on")
+                        span Включено
+                .dflt-radio
+                    input(type="radio" id="turn-off" name="AutoManagement")
+                    label(for="turn-off")
+                        span Выключено
+
+            .available-resumes
+                .available-resumes__title Доступно:
+                    span 120
+                    | резюме
+                .available-amount
+                    input.available-amount__input(type="number" placeholder="Кол-во резюме в работу")
+                    a.dflt-bttn(href="#") Запустить
+            .grey-block
+                .grey-block__img
+                    img(src="image/sticky-on.svg" alt="#")
+                .grey-block__text
+                    .grey-block__title Запуск процессов
+                    .grey-block__desc В автоматическом режиме процессы запускаются при добавлении нового резюме. Если автоматический режим выключен, то запуск происходит на данной странице
+            a.mobile-btn.dflt-bttn(href="#") Сохранить
+
+        .sticky-right.connection#connection
+
+            .sticky-right__title Подключение модулей
+
+            .connection-row.first
+                .custom-control.custom-checkbox
+                    input.custom-control-input#defaultUnchecked(type="checkbox")
+                    label.custom-control-label(for="defaultUnchecked") Приглашение кандидата с отклика
+                .connection-row__right
+                    .connection-row__right-amount.connection-row__btn
+                        span 100
+                        | шт.
+                    a.connection-row__right-yellow.connection-row__btn(href="#") Купить
+            .connection-row
+                .custom-control.custom-checkbox
+                    input.custom-control-input#connectionType-1(type="checkbox")
+                    label.custom-control-label(for="connectionType-1") Приглашение кандидата с резюме
+                .connection-row__right
+                    .connection-row__right-amount.connection-row__btn
+                        span 100
+                        | шт.
+                    a.connection-row__right-yellow.connection-row__btn(href="#") Купить
+            .connection-row
+                .custom-control.custom-checkbox
+                    input.custom-control-input#connectionType-2(type="checkbox")
+                    label.custom-control-label(for="connectionType-2") Тестовое задание
+                .connection-row__right
+                    .connection-row__right-amount.connection-row__btn
+                        span 100
+                        | шт.
+                    a.connection-row__right-yellow(href="#").connection-row__btn Купить
+            .connection-row
+                .custom-control.custom-checkbox
+                    input.custom-control-input#connectionType-3(type="checkbox")
+                    label.custom-control-label(for="connectionType-3") Психологический тест
+                .connection-row__right
+                    .connection-row__right-free.connection-row__btn Бесплатно
+            .connection-row
+                .custom-control.custom-checkbox
+                    input.custom-control-input#connectionType-4(type="checkbox")
+                    label.custom-control-label(for="connectionType-4") Тестирование проф. навыков
+                .connection-row__right
+                    .connection-row__right-amount.connection-row__btn
+                        span 100
+                        | шт.
+                    a.connection-row__right-yellow.connection-row__btn(href="#") Купить
+            .connection-row.last
+                .custom-control.custom-checkbox
+                    input.custom-control-input#connectionType-5(type="checkbox")
+                    label.custom-control-label(for="connectionType-5") Запись на собеседование
+                .connection-row__right
+                    .connection-row__right-free.connection-row__btn Бесплатно
+            .grey-block
+                .grey-block__img
+                    img(src="image/flag.svg" alt="#")
+                .grey-block__text
+                    .grey-block__desc Ознакомьтесь с возможностями каждого модуля на 
+                        a.grey-block__link(href="#") данной странице
+            a.mobile-btn.dflt-bttn(href="#") Сохранить
+
+        .sticky-right.setting#setting
+
+            .sticky-right__title Настройки процесса найма
+            .setting-desc Здесь отображаются промежуточные шаги вашего найма. Вы можете поменять их последовательность, добавить или убрать шаг.
+
+            .setting-row
+                .setting-col
+                    #drag-drop.drag-drop
+                        .drag-drop__text 
+                            p Перетащите поочередно этапы отбора
+                        .drag-drop__elem-all
+                            .drag-drop__elem-1 Шаг №1
+                            .drag-drop__elem-2
+                                .drag-drop__elem Психологический тест
+
+                .setting-col
+                    .drag-drop__elem Тестирование проф. навыков
+                    .drag-drop__elem Подключение модулей
+            a.mobile-btn.dflt-bttn(href="#") Сохранить
+
+        .sticky-right#test-work
+
+            .sticky-right__title Тестовое задание
+
+            .test-work
+                .test-work__col-1
+                    .test-work__block
+                        label.test-work__label(for="task-name") Название задачи
+                        input.test-work__input#task-name(type="text" name="task-name" placeholder="Написать статью")
+                    .test-work__block
+                        label.test-work__label(for="task-name") Время выполнения
+                        input.test-work__input#task-name(type="text" name="task-name" placeholder="2 часа")
+                    .test-work__block
+                        .test-work__label Загрузка приложений
+                        a.test-btn.dflt-bttn(href="#") + Добавить файл
+                    .uppload-block#uppload-block
+                        .uppload-block__text Или перетащите файл сюда
+                        .uppload-block__links
+                            a.uppload-block__link(.pdfhref="#")
+                                img(src="image/icon-pdf.svg" alt="#")
+                                | Пример статьи. Тестовое. pdf
+                            a.uppload-block__link(href="#")
+                                img(src="image/icon-png.svg" alt="#")
+                                | Пример картинки. Тестовое. png
+                            a.uppload-block__link(href="#")
+                                img(src="image/icon-jpg.svg" alt="#")
+                                | Пример картинки. Тестовое. jpg
+                            a.uppload-block__link(href="#")
+                                img(src="image/icon-xls.svg" alt="#")
+                                | Сроки сдачи статей. exsl
+                            a.uppload-block__link(href="#")
+                                img(src="image/icon-doc.svg" alt="#")
+                                | Пример статьи. Тестовое. doc
+
+                .test-work__col-2
+                    .test-work__block
+                        label.test-work__label(for="task-details") Название задачи
+                        textarea.test-work__textarea#task-details(name="task-details" placeholder="Расскажите про основные аспекты задачи")
+                    .test-work__block
+                        label.test-work__label(for="task-details-2") Суть задачи
+                        textarea.test-work__textarea#task-details-2(name="task-details-2" placeholder="Как должен выглядеть результат?")
+                    .test-work__block
+                        label.test-work__label(for="task-details-3") Требования к задаче
+                        textarea.test-work__textarea#task-details-3(name="task-details-3" placeholder="Что обязательно должно присутствовать в работе?")
+
+                a.mobile-btn.dflt-bttn(href="#") Сохранить
+
+
+        .sticky-right#testing.testing
+
+            .sticky-right__title Тестирование навыков
+
+            .test-work
+                .test-work__col-1
+                    .test-work__block
+                        .test-work__label(for="choose-test") Выберите тест из списка
+                        .dflt-select
+                            a.dflt-select__bttn(href="javascript:void(0);") Options
+                            ul.dflt-select__dropdown
+                                li
+                                    a(href="javascript:void(0);") Options
+                                li
+                                    a(href="javascript:void(0);") Options
+                                li
+                                    a(href="javascript:void(0);") Options
+
+            a.mobile-btn.dflt-bttn(href="#") Сохранить
+
+

@@ -1,0 +1,53 @@
+.info-system-bar#sticky
+    include ../info-system-bar/info-system-bar.pug
+
+.content-system-section
+    .content-system-section__navline
+        .container
+            .row
+                .col-lg-12
+                    include ../content-system-switch/content-system-switch.pug
+
+    .content-system-section__content
+        .container
+            .row.align-items-center.vacancy-row
+                .first-col.vacancy-row__col
+                    h2.content-system-section__title
+                        | График собеседований
+                .second-col.vacancy-row__col
+                    .dflt-select
+                        a.dflt-select__bttn(href="javascript:void(0);") Предстоящие
+                        ul.dflt-select__dropdown
+                            li
+                                a(href="javascript:void(0);") Предстоящие
+                            li
+                                a(href="javascript:void(0);") Архивные
+                            li
+                                a(href="javascript:void(0);") Все
+                .third-col.vacancy-row__col
+                    a.dflt-bttn(data-toggle="modal" data-target="#addEvent" type="button") Добавить событие в график
+                .fourth-col.vacancy-row__col
+                    .interview-list
+                        .interview-list__title Собеседует:
+                        .dflt-select
+                            a.dflt-select__bttn(href="javascript:void(0);") Любой сотрудник
+                            ul.dflt-select__dropdown
+                                li
+                                    a(href="javascript:void(0);") Кожевников И.И.
+                                li
+                                    a(href="javascript:void(0);") Иванов И.И.
+                                li
+                                    a(href="javascript:void(0);") Кожевников И.И.
+            .row
+                .col-lg-12
+                    .schedule-date-wrapper
+                        .schedule-date-wrapper__info
+                            span.schedule-date-wrapper__date 10.11.2019
+                        .schedule-date-wrapper__list
+                            include ../schedule-info/schedule-info.pug
+
+                    .schedule-date-wrapper
+                        .schedule-date-wrapper__info
+                            span.schedule-date-wrapper__date 11.11.2019
+                        .schedule-date-wrapper__list
+                            include ../schedule-info/schedule-info.pug

@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+        title Компании - Личный кабинет компании
+
+        include layouts/seo.pug
+    body
+
+        include layouts/header/header.pug
+
+        main.main
+            
+            include layouts/company-item-structure/company-item-structure.pug
+
+    include layouts/modal/modal.pug
+    include layouts/fixed-nav/fixed-nav.pug
+
+    include layouts/scripts.pug

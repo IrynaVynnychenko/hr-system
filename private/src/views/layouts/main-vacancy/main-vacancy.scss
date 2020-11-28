@@ -1,0 +1,44 @@
+.main-vacancy {
+  .main-title {
+    margin-bottom: 18px;
+  }
+  &__desc {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 46px;
+    color: #ffffff;
+    margin-bottom: 48px;
+  }
+  .dflt-bttn {
+    height: 50px;
+    max-width: 264px;
+    width: 100%;
+  }
+  .main-block {
+    padding-bottom: 50px;
+  }
+  .main-pict {
+    position: relative;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-vacancy .main-pict {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-vacancy .main-title {
+    margin-bottom: 24px;
+  }
+  .main-vacancy__desc {
+    font-size: 25px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  .main-vacancy .main-block {
+    padding-bottom: 0px;
+  }
+}

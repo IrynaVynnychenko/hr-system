@@ -1,0 +1,78 @@
+#exampleModal.modal.fade.modal-private(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                .modal-header__img
+                    img(src="image/modal-pict.png" alt="#")
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.03127 20.0943L20.094 8.03154M20.0939 20.0942L8.03111 8.03139" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+            .modal-body
+                .modal-popup__title Отклик на вакансию
+                .modal-popup__row
+                    .modal-popup__row-block
+                        label.modal-popup__label(for="name") Имя
+                        input.modal-popup__input#name(type="text" placeholder="Александр" name="name")
+                    .modal-popup__row-block
+                        label.modal-popup__label(for="surname") Фамилия
+                        input.modal-popup__input#surname(type="text" placeholder="Филиппов" name="surname")
+                .modal-popup__row
+                    .modal-popup__row-block
+                        label.modal-popup__label(for="email") E-mail
+                        input.modal-popup__input#email(type="email" placeholder="info@mebot24-hr.ru" name="email")
+                    .modal-popup__row-block
+                        label.modal-popup__label(for="tel") Номер телефона
+                        input.modal-popup__input#tel(type="text" placeholder="+7 (___) ___-__-__" name="phone")
+                .modal-popup__row
+                    .modal-popup__row-block.comments-block
+                        label.modal-popup__label(for="comments") Комментарий
+                        textarea#comments.modal-popup__textarea(name="private-textarea" placeholder="Ссылка на портфолио, личный сайт, работы")
+                .modal-popup__docs
+                    .modal-popup__docs-area#private-docs__area
+
+                        a.private-docs__item(href="#")
+                            img(src="image/pdf.svg" alt="#")
+                            | Портфолио. pdf                          
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6M6 1L1 6" stroke="#828282" stroke-linecap="round"/>
+                            </svg>
+
+                        a.private-docs__item(href="#")
+                            img(src="image/xls.svg" alt="#")
+                            | Таблица. xls                         
+                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6M6 1L1 6" stroke="#828282" stroke-linecap="round"/>
+                            </svg>
+
+
+                    a.private-btn(href="#")                    
+                        <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.21218 3.71179L4.59965 2.08609V3.21886C4.59992 3.49094 4.80674 3.7115 5.06184 3.71179H6.21218Z" fill="#CDCEDE"/>
+                        <path d="M6.63441 1.25668V0H3.05891C2.67615 0.000481374 2.36597 0.331186 2.36561 0.739392V1.32917H4.42978C4.48882 1.32917 4.5456 1.35324 4.58857 1.39647L6.89295 3.71978C6.93908 3.76628 6.96526 3.83107 6.96526 3.89885V9.17799H8.30671C8.68946 9.17751 8.99955 8.84671 9 8.4386V2.24244H7.55889C7.04858 2.24186 6.63504 1.80082 6.63441 1.25668Z" fill="#CDCEDE"/>
+                        <path d="M7.5588 1.74961H8.56064L7.0966 0.300957V1.25668C7.09696 1.52875 7.30369 1.74922 7.5588 1.74961Z" fill="#CDCEDE"/>
+                        <path d="M4.13745 3.21886V1.82201H0.693292C0.310537 1.82249 0.000451356 2.15329 0 2.5614V10.2606C0.000451356 10.6687 0.310537 10.9995 0.693292 11H5.80975C6.1925 10.9995 6.50268 10.6687 6.50304 10.2606V4.20472H5.06184C4.55153 4.20414 4.13808 3.7631 4.13745 3.21886Z" fill="#CDCEDE"/>
+                        </svg>
+                        | Прикрепить файл
+                .modal-popup__btn
+                    a.dflt-bttn(href="#") Отправить отклик на вакансию
+
+
+#exampleModal-1.modal.fade.modal-private.modal-ty(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                .modal-header__img
+                    img(src="image/ty-img.png" alt="#")
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.03127 20.0943L20.094 8.03154M20.0939 20.0942L8.03111 8.03139" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+            .modal-body
+                .modal-popup__title Отправлено
+                .modal-popup__desc Спасибо за вашу заявку! Мы свяжемся с вами по почте в ближайшее время и обсудим все детали.
+                .modal-popup__btn
+                    a.dflt-bttn(href="#") Хорошо, спасибо!
+

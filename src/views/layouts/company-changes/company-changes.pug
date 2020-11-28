@@ -1,0 +1,83 @@
+section.add-form
+    .container
+        form(action="#")
+            .row
+                .col-lg-6
+                    .new-account__row
+                        .new-account__row-item.all
+                            label.new-account__label(for="company-name") Название компании
+                            input.new-account__input(type="text" id="company-name" placeholder="ООО «Рога и копыта»")
+                    .new-account__row.several
+                        .new-account__row-select
+                            label.new-account__label(for="city") Город
+                            .new-account__dropdown
+                                select.header-dropdown__list(name='city')
+                                    option(value='Москва') Москва
+                                    option(value='Москва') Москва
+                                    option(value='Москва') Москва
+                                    option(value='Москва') Москва
+                        .new-account__row-select
+                            label.new-account__label(for="city") Часовой пояс
+                            .new-account__dropdown
+                                select.header-dropdown__list(name='time')
+                                    option(value='GMT+3') GMT+3
+                                    option(value='GMT+3') GMT+3
+                                    option(value='GMT+3') GMT+3
+                                    option(value='GMT+3') GMT+3
+                    .new-account__row
+                        .new-account__row-select.all
+                            label.new-account__label(for="adress") Адрес
+                            input.new-account__input(type="text" id="adress" placeholder="г. Москва, ул. Барклая, д 6, стр 5, офис 328")
+                    .new-account__row
+                        .new-account__row-item
+                            label.new-account__label(for="email") E-mail
+                            input.new-account__input.single(type="email" id="mail" placeholder="info@mebot24-hr.ru")
+                        .new-account__row-item
+                            label.new-account__label(for="phone") Телефон
+                            input.new-account__input.single.dflt-input.dflt-input_phone(type="tel" id="phone" placeholder="+7 (988) 456-45-56")
+                    .new-account__row
+                        .new-account__row-item.all
+                            label.new-account__label(for="company") Описание компании
+                            textarea.new-account__textarea.new-account__input(name="company" placeholder="Мы дизайн-студия. Создаем сайты и приложения.")
+
+                .col-lg-6
+                    .new-account__label Выберите цвет вашей компании
+                    .add-form__block 
+                        .add-form__block-color.blue.active
+                            span.blue
+                        .add-form__block-color.green
+                            span.green
+                        .add-form__block-color.violet
+                            span.violet
+                        .add-form__block-color.darkBlue
+                            span.darkBlue
+                        .add-form__block-color.darkGreen
+                            span.darkGreen
+                    .new-account__label.bg Выберите фоновое изображение вашей компании
+                    .add-form__row
+                        .list-item__border
+                            .all-companies-list-item
+                                .all-companies-list-item__bg
+                                    img(src="image/build-2.png" alt="#")
+                        .list-item__border
+                            .all-companies-list-item
+                                .all-companies-list-item__bg
+                                    img(src="image/build.png" alt="#")
+                    .add-form__row
+                        .list-item__border.active
+                            .all-companies-list-item
+                                .all-companies-list-item__bg
+                                    img(src="image/build-3.png" alt="#")
+                        .list-item__border
+                            .all-companies-list-item
+                                .all-companies-list-item__bg
+                                    img(src="image/build-4.png" alt="#")
+                    .add-form__row
+                        .list-item__border
+                            .all-companies-list-item
+                                .all-companies-list-item__bg
+                                    img(src="image/build-5.png" alt="#")    
+            .row
+                .col-lg-12
+                    .company-bottom__btn
+                        button.btn-yellow.btn-company(type="submit") Сохранить изменения

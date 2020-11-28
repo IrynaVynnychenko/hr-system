@@ -1,0 +1,49 @@
+header.header
+	.header__topline
+		.container
+			.row.align-items-center
+				.col-xl-2.col-lg-2.col-md-6.col-9.d-flex.align-items-center.d-lg-block
+					button(type="button" class="main-menu-show d-lg-none hamburger hamburger--spin")
+						span.hamburger-box
+							span.hamburger-inner
+					a.main-logo(href="javascript:void(0);")
+						img(src="image/main-logo.svg" alt="#")
+				.col-xl-4.col-lg-4.col-md-5.d-none.d-lg-block
+					.help-contact
+						span У вас есть вопросы?
+						span.help-contact__dash
+						a(href="mailto:info@mebot24-hr.ru") info@mebot24-hr.ru
+				.col-xl-4.col-lg-4.col-md-6.col-3
+					include ../dropdown/dropdown.pug           
+				.col-xl-2.col-lg-2.col-md-6.col-3
+					.profile-display
+						a.profile-display__bttn(href="javascript:void(0);" data-letters="ИН")
+							span Иванов Н.П.
+						.profile-block
+							.profile-block__title Иванов Н.П.
+
+							.profile-block__btns
+								a.btn-correct.profile__btn-transparent(href="/profile/") Редактировать профиль
+								a.btn-out.profile__btn-transparent(href="/?logout=yes") Выйти
+
+	.header__navline.d-none.d-lg-block
+		.container
+			.row.align-items-center
+				.col-lg-8
+					nav.main-nav
+						ul.main-menu
+							li.main-menu__item
+								a.main-menu__link(href="/") Главная
+							li.main-menu__item.main-menu__item-vacancies
+								a.main-menu__link(href="/vacancy/") Вакансии
+							li.main-menu__item
+								a.main-menu__link(href="/company/") Компании
+							li.main-menu__item
+								a.main-menu__link(href="/") О системе
+				.col-lg-4
+					a.other-products(href="javascript:void(0);")
+						| Другие продукты
+						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+	include ../mobile-menu/mobile-menu.pug

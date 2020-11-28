@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Компании - Личный кабинет компании</title>
+    <link rel="icon" type="image/png" href="image/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="image/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="image/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__topline">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-9 d-flex align-items-center d-lg-block">
+              <button class="main-menu-show d-lg-none hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="main-logo" href="javascript:void(0);"><img src="image/main-logo.svg" alt="#"></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-5 d-none d-lg-block">
+              <div class="help-contact"><span>У вас есть вопросы?</span><span class="help-contact__dash"></span><a href="mailto:info@mebot24-hr.ru">info@mebot24-hr.ru</a></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-3">
+              <div id="selectVue">
+                <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-3">
+              <div class="profile-display"><a class="profile-display__bttn" href="javascript:void(0);" data-letters="ИН"><span>Иванов Н.П.</span></a>
+                <div class="profile-block">
+                  <div class="profile-block__title">Иванов Н.П.</div>
+                  <div class="profile-block__btns"><a class="btn-correct profile__btn-transparent" href="/profile/">Редактировать профиль</a><a class="btn-out profile__btn-transparent" href="/?logout=yes">Выйти</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__navline d-none d-lg-block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <nav class="main-nav">
+                <ul class="main-menu">
+                  <li class="main-menu__item"><a class="main-menu__link" href="/">Главная</a></li>
+                  <li class="main-menu__item main-menu__item-vacancies"><a class="main-menu__link" href="/vacancy/">Вакансии</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="/company/">Компании</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="/">О системе</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-lg-4"><a class="other-products" href="javascript:void(0);">
+                Другие продукты<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu__block">
+        <nav class="mobile-menu" role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox">
+            <div class="number">5</div>
+            <div class="toggle-block"><span></span><span></span><span></span></div>
+            <div class="mobile" id="menu">
+              <div class="mobile-profile">
+                <div class="mobile-profile__column">
+                  <div class="mobile-profile__bg"><span>ИН</span></div>
+                </div>
+                <div class="mobile-profile__column">
+                  <div class="mobile-profile__name">
+                    <div class="mobile-profile__name-item">Иванов Н.П.</div><a class="mobile-profile__link" href="/fix-company.html">Редактировать профиль<span><img src="./image/arrow-right.svg" alt="#"></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile-block">
+                <div class="mobile-block__list">
+                  <div id="selectVue">
+                    <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+                  </div>
+                </div><a class="mobile-block__item" href="/"><span class="profile-icon"> <img src="./image/icon-1.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Главная</div></a><a class="mobile-block__item" href="/active&amp;archive.html"><span class="profile-icon"> <img src="./image/icon-2.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Вакансии</div><span class="mobile-number active">5</span></a><a class="mobile-block__item" href="/companies.html"><span class="profile-icon"> <img src="./image/icon-3.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Компании</div><span class="mobile-number">2</span></a><a class="mobile-block__item" href="javascript:void(0);"><span class="profile-icon"> <img src="./image/icon-4.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">О системе</div></a><a class="mobile-block__item" href="/login.html"><span class="profile-icon"> <img src="./image/icon-5.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Выход</div></a>
+              </div>
+              <div class="mobile-footer">
+                <div class="mobile-footer__logo"><img src="./image/footer-logo.svg" alt="#"></div><a class="mobile-footer__item mail" href="mailto:info@mebot24.ru"> <span><img src="./image/mail-footer.svg" alt="#"></span>info@mebot24.ru</a><a class="mobile-footer__item tel" href="tel:+84951183619"> <span><img src="./image/tel-footer.svg" alt="#"></span>8 (495)-118-36-19</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="collapse-overlay"></div>
+        <div id="selectVue">
+          <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="company-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-4">
+              <h2 class="company-header__name">Рога и копыта</h2>
+            </div>
+            <div class="col-xl-7 col-lg-8">
+              <div class="company-header__mobile-btns">
+                <div class="company-header__btns"><a class="btn-transparent active" href="/fix-company.html"><span><svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.84007 1.83576L10.0777 4.08434L4.41361 9.77619L2.17723 7.5276L7.84007 1.83576ZM11.7757 1.29345L10.7778 0.290658C10.3921 -0.0968862 9.76588 -0.0968862 9.37891 0.290658L8.42302 1.25123L10.6607 3.49984L11.7757 2.37938C12.0748 2.07878 12.0748 1.59403 11.7757 1.29345ZM1.00623 10.6882C0.965505 10.8723 1.13097 11.0374 1.31426 10.9926L3.80775 10.385L1.57137 8.13646L1.00623 10.6882Z"/>
+</svg></span>Редактировать компанию</a><a class="btn-transparent" href="/company-item.html"><span><svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.2121 9.60921C5.1071 9.71483 4.96384 9.77376 4.81503 9.77376C4.66621 9.77376 4.52295 9.71483 4.41795 9.60921L1.24682 6.43756C0.917726 6.10847 0.917726 5.57482 1.24682 5.24634L1.64389 4.84917C1.97309 4.52007 2.50612 4.52007 2.83522 4.84917L4.81503 6.82908L10.1648 1.47924C10.494 1.15015 11.0275 1.15015 11.3561 1.47924L11.7532 1.87642C12.0823 2.20551 12.0823 2.73906 11.7532 3.06764L5.2121 9.60921Z"/>
+</svg></span>Права доступа</a><a class="btn-transparent" href="/add-company.html"><span><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="6.95674" cy="7" rx="6.95674" ry="7" />
+<path d="M7 4V10M10 7L4 7" stroke="#67B7F0" stroke-width="1.5" stroke-linecap="round"/>
+</svg></span>Добавить компанию</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="company-amount">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-4">
+              <div class="company-amount__title">Всего: <span>7 </span>сотрудников</div>
+            </div>
+            <div class="col-xl-7 col-lg-8">
+              <div class="company-amount__block">
+                <button class="btn-yellow btn-company" data-toggle="modal" data-target="#exampleModal" type="button"><span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="6.95674" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M6.95639 5V9M8.94403 7L4.96875 7" stroke="#FEDC2D" stroke-width="1.5" stroke-linecap="round"/>
+</svg></span>Добавить сотрудника</button>
+                <div class="search-block">
+                  <input class="search-input" id="search-input" type="text" placeholder="Имя сотрудника">
+                  <label class="label-search" for="search-input"><img src="./image/loop.svg" alt="#"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="company-table desktop">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="company-table__top">
+                <div class="company-table__row">
+                  <div class="company-table__row-item">ФИО</div>
+                  <div class="company-table__row-item">Роль</div>
+                  <div class="company-table__row-item">Вакансии</div>
+                  <div class="company-table__row-item">Собеседования</div>
+                  <div class="company-table__row-item">Анкеты</div>
+                  <div class="company-table__row-item last"></div>
+                </div>
+              </div>
+              <div class="company-table__body">
+                <div class="company-table__row">
+                  <div class="company-table__row-item">Филипов Александр Александрович</div>
+                  <div class="company-table__row-item">Администратор</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item">Редактирование</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item last">
+                    <div class="company-table__icons"><a class="company-table__icons-pen" data-toggle="modal" data-target="#exampleModal" type="button"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8147 3.17086L15.6797 7.05478L5.89624 16.8861L2.0334 13.0022L11.8147 3.17086ZM18.6125 2.23414L16.8889 0.502046C16.2227 -0.167349 15.1411 -0.167349 14.4727 0.502046L12.8216 2.16122L16.6866 6.04518L18.6125 4.10984C19.1292 3.59062 19.1292 2.75333 18.6125 2.23414ZM0.0107555 18.4614C-0.0595831 18.7795 0.226226 19.0645 0.542821 18.9872L4.84975 17.9378L0.98691 14.0539L0.0107555 18.4614Z" fill="#CDCEDE"/>
+</svg></a>
+                      <div class="company-table__icons-delete"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999993 14C0.999993 15.1025 1.89695 16 2.99998 16H11C12.103 16 13 15.1025 13 14V4.00001H0.999993V14Z" fill="#CDCEDE"/>
+<path d="M9 0.999994V0H5V0.999994H0V2.99998H14V0.999994H9Z" fill="#CDCEDE"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-table__row">
+                  <div class="company-table__row-item">Филипов Александр Александрович</div>
+                  <div class="company-table__row-item">Администратор</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item">Редактирование</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item last">
+                    <div class="company-table__icons"><a class="company-table__icons-pen" data-toggle="modal" data-target="#exampleModal" type="button"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8147 3.17086L15.6797 7.05478L5.89624 16.8861L2.0334 13.0022L11.8147 3.17086ZM18.6125 2.23414L16.8889 0.502046C16.2227 -0.167349 15.1411 -0.167349 14.4727 0.502046L12.8216 2.16122L16.6866 6.04518L18.6125 4.10984C19.1292 3.59062 19.1292 2.75333 18.6125 2.23414ZM0.0107555 18.4614C-0.0595831 18.7795 0.226226 19.0645 0.542821 18.9872L4.84975 17.9378L0.98691 14.0539L0.0107555 18.4614Z" fill="#CDCEDE"/>
+</svg></a>
+                      <div class="company-table__icons-delete"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999993 14C0.999993 15.1025 1.89695 16 2.99998 16H11C12.103 16 13 15.1025 13 14V4.00001H0.999993V14Z" fill="#CDCEDE"/>
+<path d="M9 0.999994V0H5V0.999994H0V2.99998H14V0.999994H9Z" fill="#CDCEDE"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-table__row">
+                  <div class="company-table__row-item">Филипов Александр Александрович</div>
+                  <div class="company-table__row-item">Администратор</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item">Редактирование</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item last">
+                    <div class="company-table__icons"><a class="company-table__icons-pen" data-toggle="modal" data-target="#exampleModal" type="button"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8147 3.17086L15.6797 7.05478L5.89624 16.8861L2.0334 13.0022L11.8147 3.17086ZM18.6125 2.23414L16.8889 0.502046C16.2227 -0.167349 15.1411 -0.167349 14.4727 0.502046L12.8216 2.16122L16.6866 6.04518L18.6125 4.10984C19.1292 3.59062 19.1292 2.75333 18.6125 2.23414ZM0.0107555 18.4614C-0.0595831 18.7795 0.226226 19.0645 0.542821 18.9872L4.84975 17.9378L0.98691 14.0539L0.0107555 18.4614Z" fill="#CDCEDE"/>
+</svg></a>
+                      <div class="company-table__icons-delete"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999993 14C0.999993 15.1025 1.89695 16 2.99998 16H11C12.103 16 13 15.1025 13 14V4.00001H0.999993V14Z" fill="#CDCEDE"/>
+<path d="M9 0.999994V0H5V0.999994H0V2.99998H14V0.999994H9Z" fill="#CDCEDE"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-table__row">
+                  <div class="company-table__row-item">Филипов Александр Александрович</div>
+                  <div class="company-table__row-item">Администратор</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item">Редактирование</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item last">
+                    <div class="company-table__icons"><a class="company-table__icons-pen" data-toggle="modal" data-target="#exampleModal" type="button"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8147 3.17086L15.6797 7.05478L5.89624 16.8861L2.0334 13.0022L11.8147 3.17086ZM18.6125 2.23414L16.8889 0.502046C16.2227 -0.167349 15.1411 -0.167349 14.4727 0.502046L12.8216 2.16122L16.6866 6.04518L18.6125 4.10984C19.1292 3.59062 19.1292 2.75333 18.6125 2.23414ZM0.0107555 18.4614C-0.0595831 18.7795 0.226226 19.0645 0.542821 18.9872L4.84975 17.9378L0.98691 14.0539L0.0107555 18.4614Z" fill="#CDCEDE"/>
+</svg></a>
+                      <div class="company-table__icons-delete"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999993 14C0.999993 15.1025 1.89695 16 2.99998 16H11C12.103 16 13 15.1025 13 14V4.00001H0.999993V14Z" fill="#CDCEDE"/>
+<path d="M9 0.999994V0H5V0.999994H0V2.99998H14V0.999994H9Z" fill="#CDCEDE"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-table__row">
+                  <div class="company-table__row-item">Филипов Александр Александрович</div>
+                  <div class="company-table__row-item">Администратор</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item">Редактирование</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item last">
+                    <div class="company-table__icons"><a class="company-table__icons-pen" data-toggle="modal" data-target="#exampleModal" type="button"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8147 3.17086L15.6797 7.05478L5.89624 16.8861L2.0334 13.0022L11.8147 3.17086ZM18.6125 2.23414L16.8889 0.502046C16.2227 -0.167349 15.1411 -0.167349 14.4727 0.502046L12.8216 2.16122L16.6866 6.04518L18.6125 4.10984C19.1292 3.59062 19.1292 2.75333 18.6125 2.23414ZM0.0107555 18.4614C-0.0595831 18.7795 0.226226 19.0645 0.542821 18.9872L4.84975 17.9378L0.98691 14.0539L0.0107555 18.4614Z" fill="#CDCEDE"/>
+</svg></a>
+                      <div class="company-table__icons-delete"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999993 14C0.999993 15.1025 1.89695 16 2.99998 16H11C12.103 16 13 15.1025 13 14V4.00001H0.999993V14Z" fill="#CDCEDE"/>
+<path d="M9 0.999994V0H5V0.999994H0V2.99998H14V0.999994H9Z" fill="#CDCEDE"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-table__row">
+                  <div class="company-table__row-item">Филипов Александр Александрович</div>
+                  <div class="company-table__row-item">Администратор</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item">Редактирование</div>
+                  <div class="company-table__row-item">Просмотр</div>
+                  <div class="company-table__row-item last">
+                    <div class="company-table__icons"><a class="company-table__icons-pen" data-toggle="modal" data-target="#exampleModal" type="button"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8147 3.17086L15.6797 7.05478L5.89624 16.8861L2.0334 13.0022L11.8147 3.17086ZM18.6125 2.23414L16.8889 0.502046C16.2227 -0.167349 15.1411 -0.167349 14.4727 0.502046L12.8216 2.16122L16.6866 6.04518L18.6125 4.10984C19.1292 3.59062 19.1292 2.75333 18.6125 2.23414ZM0.0107555 18.4614C-0.0595831 18.7795 0.226226 19.0645 0.542821 18.9872L4.84975 17.9378L0.98691 14.0539L0.0107555 18.4614Z" fill="#CDCEDE"/>
+</svg></a>
+                      <div class="company-table__icons-delete"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999993 14C0.999993 15.1025 1.89695 16 2.99998 16H11C12.103 16 13 15.1025 13 14V4.00001H0.999993V14Z" fill="#CDCEDE"/>
+<path d="M9 0.999994V0H5V0.999994H0V2.99998H14V0.999994H9Z" fill="#CDCEDE"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="company-table mobile">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="company-table__top">
+                <div class="company-table__row">
+                  <div class="company-table__row-item">ФИО, роль</div>
+                  <div class="company-table__row-item">Доступ</div>
+                  <div class="company-table__row-item last"></div>
+                </div>
+              </div>
+              <div class="company-table__body">
+                <div class="company-table__row">
+                  <div class="company-table__row-item"> 
+                    <div class="company-table__row-block"> 
+                      <p class="name">Филипов Александр Александрович</p>
+                      <p class="position">Администратор</p>
+                    </div>
+                  </div>
+                  <div class="company-table__row-item">
+                    <div class="company-table__column">
+                      <div class="company-table__column-first">
+                        <p>Вакансии</p>
+                        <p class="status">Просмотр </p>
+                      </div>
+                      <div class="company-table__column-second">
+                        <p>Анкеты</p>
+                        <p class="status">Просмотр </p>
+                      </div>
+                      <div class="company-table__column-third">
+                        <p>Собеседования</p>
+                        <p class="status">Редактирование </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="company-table__row-item last">
+                    <div class="company-table__icons"><a class="company-table__icons-pen" data-toggle="modal" data-target="#exampleModal" type="button"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8147 3.17086L15.6797 7.05478L5.89624 16.8861L2.0334 13.0022L11.8147 3.17086ZM18.6125 2.23414L16.8889 0.502046C16.2227 -0.167349 15.1411 -0.167349 14.4727 0.502046L12.8216 2.16122L16.6866 6.04518L18.6125 4.10984C19.1292 3.59062 19.1292 2.75333 18.6125 2.23414ZM0.0107555 18.4614C-0.0595831 18.7795 0.226226 19.0645 0.542821 18.9872L4.84975 17.9378L0.98691 14.0539L0.0107555 18.4614Z" fill="#CDCEDE"/>
+</svg></a>
+                      <div class="company-table__icons-delete"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999993 14C0.999993 15.1025 1.89695 16 2.99998 16H11C12.103 16 13 15.1025 13 14V4.00001H0.999993V14Z" fill="#CDCEDE"/>
+<path d="M9 0.999994V0H5V0.999994H0V2.99998H14V0.999994H9Z" fill="#CDCEDE"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="company-table__top">
+                <div class="company-table__row">
+                  <div class="company-table__row-item">ФИО, роль</div>
+                  <div class="company-table__row-item">Доступ</div>
+                  <div class="company-table__row-item last"></div>
+                </div>
+              </div>
+              <div class="company-table__body">
+                <div class="company-table__row">
+                  <div class="company-table__row-item"> 
+                    <div class="company-table__row-block"> 
+                      <p class="name">Филипов Александр Александрович</p>
+                      <p class="position">Администратор</p>
+                    </div>
+                  </div>
+                  <div class="company-table__row-item">
+                    <div class="company-table__column">
+                      <div class="company-table__column-first company-table__column-item">
+                        <p>Вакансии</p>
+                        <p class="status">Просмотр </p>
+                      </div>
+                      <div class="company-table__column-second company-table__column-item">
+                        <p>Анкеты</p>
+                        <p class="status">Просмотр </p>
+                      </div>
+                      <div class="company-table__column-third company-table__column-item">
+                        <p>Собеседования</p>
+                        <p class="status">Редактирование </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="company-table__row-item last">
+                    <div class="company-table__icons"><a class="company-table__icons-pen" data-toggle="modal" data-target="#exampleModal" type="button"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8147 3.17086L15.6797 7.05478L5.89624 16.8861L2.0334 13.0022L11.8147 3.17086ZM18.6125 2.23414L16.8889 0.502046C16.2227 -0.167349 15.1411 -0.167349 14.4727 0.502046L12.8216 2.16122L16.6866 6.04518L18.6125 4.10984C19.1292 3.59062 19.1292 2.75333 18.6125 2.23414ZM0.0107555 18.4614C-0.0595831 18.7795 0.226226 19.0645 0.542821 18.9872L4.84975 17.9378L0.98691 14.0539L0.0107555 18.4614Z" fill="#CDCEDE"/>
+</svg></a>
+                      <div class="company-table__icons-delete"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999993 14C0.999993 15.1025 1.89695 16 2.99998 16H11C12.103 16 13 15.1025 13 14V4.00001H0.999993V14Z" fill="#CDCEDE"/>
+<path d="M9 0.999994V0H5V0.999994H0V2.99998H14V0.999994H9Z" fill="#CDCEDE"/>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="company-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="company-bottom__btn"><a class="btn-yellow btn-company" href="javascript:void(0);">Следующая страница</a>
+                <div class="company-bottom__footer"><a class="btn-left btn-arrow" href="javascript:void(0);"><svg width="6" height="10" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 1C4.68 1.32 2.2 3.8 1 5L5 9" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                  <div class="company-bottom__numb">1</div><a class="btn-right btn-arrow" href="javascript:void(0);"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                  <div class="company-bottom__all">из<span>59</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <div class="modal fade new-account" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></button>
+        <div class="modal-body">
+          <div class="new-account__title">Добавление нового пользователя</div>
+          <form class="new-account__form" action="#">
+            <div class="new-account__row">
+              <div class="new-account__row-item">
+                <label class="new-account__label" for="name">Имя</label>
+                <input class="new-account__input" type="text" id="name" placeholder="Александр">
+              </div>
+              <div class="new-account__row-item">
+                <label class="new-account__label" for="second-name">Фамилия</label>
+                <input class="new-account__input" type="text" id="second-name" placeholder="Филиппов">
+              </div>
+            </div>
+            <div class="new-account__row">
+              <div class="new-account__row-item">
+                <label class="new-account__label" for="email">E-mail</label>
+                <input class="new-account__input" type="email" id="mail" placeholder="info@mebot24-hr.ru">
+              </div>
+              <div class="new-account__row-item">
+                <label class="new-account__label" for="position">Должность</label>
+                <input class="new-account__input" type="text" id="position" placeholder="HR-директор">
+              </div>
+            </div>
+            <div class="new-account__row several">
+              <div class="new-account__row-select">
+                <label class="new-account__label" for="positions">Вакансии</label>
+                <div class="new-account__dropdown">
+                  <select class="header-dropdown__list" name="positions">
+                    <option value="Просмотр">Просмотр</option>
+                    <option value="Просмотр">Просмотр</option>
+                    <option value="Просмотр">Просмотр</option>
+                    <option value="Просмотр">Просмотр</option>
+                  </select>
+                </div>
+              </div>
+              <div class="new-account__row-select">
+                <label class="new-account__label" for="conversations">Собеседования</label>
+                <div class="new-account__dropdown">
+                  <select class="header-dropdown__list" name="conversations">
+                    <option value="Просмотр">Редактирование</option>
+                    <option value="Просмотр">Редактирование</option>
+                    <option value="Просмотр">Редактирование</option>
+                    <option value="Просмотр">Редактирование</option>
+                  </select>
+                </div>
+              </div>
+              <div class="new-account__row-select">
+                <label class="new-account__label" for="tests">Анкеты</label>
+                <div class="new-account__dropdown">
+                  <select class="header-dropdown__list" name="tests">
+                    <option value="Просмотр">Просмотр</option>
+                    <option value="Просмотр">Просмотр</option>
+                    <option value="Просмотр">Просмотр</option>
+                    <option value="Просмотр">Просмотр</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button class="new-account__row-btn" type="submit">Сохранить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-nav">
+    <div class="fixed-nav__bar"><a class="fixed-nav__bar-bttn" href="javascript:void(0);"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.8145 0.240629C14.5148 -0.0802096 14.016 -0.0802096 13.7058 0.240629C13.4061 0.550628 13.4061 1.06657 13.7058 1.37585L19.3277 7.19068H0.776183C0.343728 7.1914 0 7.54693 0 7.99422C0 8.44151 0.343728 8.8086 0.776183 8.8086H19.3277L13.7058 14.6126C13.4061 14.9334 13.4061 15.4501 13.7058 15.7594C14.016 16.0802 14.5155 16.0802 14.8145 15.7594L21.7674 8.56797C22.0775 8.25797 22.0775 7.74203 21.7674 7.43275L14.8145 0.240629Z" fill="#828282"/>
+</svg></a>
+      <div class="fixed-nav__bar-element fixed-nav__bar-element_1" data-count="5"><span>Вакансии</span></div>
+    </div>
+    <div class="fixed-nav__content">
+      <div class="vacancy-display vacancy-display_2">
+        <div class="vacancy-display__heading">
+          <h3 class="vacancy-display__title"><span>Вакансии</span></h3>
+          <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Все вакансии</a>
+            <ul class="dflt-select__dropdown">
+              <li><a href="javascript:void(0);">Все вакансии</a></li>
+              <li><a href="javascript:void(0);">Только активные</a></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="vacancy-display__list scroll-wrapper" id="fixedNavVacancy">
+          <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">Р</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Руководитель отдела продаж </span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+        </ul><a class="dflt-bttn" href="/no-vacancy.html">
+          <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Создать вакансию</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', function() {
+    	const fixedNavVacancyWrapper = document.querySelector('#fixedNavVacancy');
+    	const fixedNavVacancyScroll = new PerfectScrollbar(fixedNavVacancyWrapper, {
+    		suppressScrollX: true
+    	});
+    });
+  </script>
+  <script src="js/main.js"></script>
+</html>

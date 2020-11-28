@@ -1,0 +1,144 @@
+.vacancies {
+  padding-top: 192px;
+  padding-bottom: 36px;
+  background: #f2f2f2;
+  margin-top: -153px;
+  &-title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+  &-block {
+    background: #fff;
+    border-radius: 5px;
+    padding: 22px 5px 22px 34px;
+    width: 100%;
+    cursor: default;
+    display: flex;
+    margin-bottom: 16px;
+    position: relative;
+    &:hover {
+      &:before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fedc2d;
+        top: 28px;
+        left: 12px;
+      }
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+    }
+    &__name {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 22px;
+      color: #333333;
+      margin-bottom: 7px;
+    }
+    &__type {
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 21px;
+      color: #828282;
+      span {
+        margin-left: 4px;
+      }
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 29px;
+      color: #828282;
+      img {
+        margin-right: 7px;
+        width: 10px;
+        height: 14px;
+      }
+    }
+    .row {
+      width: 100%;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &-amount {
+    display: flex;
+
+    cursor: default;
+    justify-content: flex-end;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    color: #333333;
+    span {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .vacancies {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  .vacancies-title {
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 12px;
+  }
+  .vacancies-block {
+    padding: 16px 16px 28px 16px;
+  }
+  .vacancies-block .row {
+    margin-right: 0px;
+    margin-left: 0px;
+    .col-lg-9 {
+      padding: 0px;
+    }
+    .col-lg-3 {
+      padding: 0px;
+    }
+  }
+  .vacancies-block__name {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  .vacancies-block__type {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .vacancies-block__place {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .vacancies-block__link {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .vacancies-amount {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .vacancies {
+    .vacancies-block {
+      &:nth-child(4) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

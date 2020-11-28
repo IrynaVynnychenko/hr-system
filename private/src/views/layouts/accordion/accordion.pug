@@ -1,0 +1,39 @@
+section.accordion-private
+    .container
+        .row
+            .col-lg-12
+                .accordion-private__title Часто задаваемые вопросы
+            .col-lg-12
+                #accordionExample.accordion
+                    .card
+                        #headingOne.card-header
+                            button.btn.btn-link(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                                .btn-text Есть ли у вас стажировка для студентов?
+                                .btn-img 
+                                    img(src="image/ellipse.svg" alt="#")
+                        #collapseOne.collapse.show(aria-labelledby='headingOne' data-parent='#accordionExample')
+                            .collapse-show Для Mebot24 Messenger нагрузка (KPI) ограничивается специальным договором, который заключается при подписании сделки и установки на нее сроков.
+                    .card
+                        #headingTwo.card-header
+                            button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+                                .btn-text Какая нагрузка допустима для бота?
+                                .btn-img 
+                                    img(src="image/ellipse.svg" alt="#")
+                        #collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordionExample')
+                            .collapse-show Для Mebot24 Messenger нагрузка (KPI) ограничивается специальным договором, который заключается при подписании сделки и установки на нее сроков.
+                    .card
+                        #headingThree.card-header
+                            button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+                                .btn-text Есть ли у вас стажировка для студентов?
+                                .btn-img 
+                                    img(src="image/ellipse.svg" alt="#")
+                        #collapseThree.collapse(aria-labelledby='headingThree' data-parent='#accordionExample')
+                            .collapse-show Для Mebot24 Messenger нагрузка (KPI) ограничивается специальным договором, который заключается при подписании сделки и установки на нее сроков.
+                    .card
+                        #headingFourth.card-header
+                            button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapseFourth' aria-expanded='false' aria-controls='collapseFourth')
+                                .btn-text Есть ли у вас стажировка для студентов?
+                                .btn-img 
+                                    img(src="image/ellipse.svg" alt="#")
+                        #collapseFourth.collapse(aria-labelledby='headingFourth' data-parent='#accordionExample')
+                            .collapse-show Для Mebot24 Messenger нагрузка (KPI) ограничивается специальным договором, который заключается при подписании сделки и установки на нее сроков.

@@ -1,0 +1,19 @@
+.main-automat {
+  background: #005c85;
+  .promo-main__desc {
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .promo-main__title {
+    margin-bottom: 28px;
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-automat .promo-main__title {
+    padding-top: 80px;
+    margin-bottom: 14px;
+  }
+}

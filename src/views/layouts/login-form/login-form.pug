@@ -1,0 +1,40 @@
+.intro
+    .intro__navline
+        .container
+            .row
+                .col-lg-12
+                    a.main-logo(href="javascript:void(0);")
+                        img(src="image/main-logo-black.svg" alt="#")
+    .intro__content
+        form.intro-form.intro-form_2.intro-form__narrow(action="#")
+            .row
+                .col-lg-12
+                    .intro-form__heading
+                        h1.intro-form__title
+                            | Войти
+            .row
+                .col-lg-12
+                    .intro-form__row
+                        .input-title.input-title_2
+                            span Номер телефона
+                        input.dflt-input.dflt-input_phone(type="text" name="phone" placeholder="+7 (___) ___-__-__")
+            .row
+                .col-lg-12
+                    .intro-form__row
+                        .input-title.input-title_2
+                            span Пароль
+                        .dflt-password
+                            input.dflt-input.dflt-input_password(type="password" id="loginPw" name="password" placeholder="**********")
+
+                            .dflt-password__text
+                                span * только латиница и цифры, не менее 8 символов
+                            .intro-form__forgot-password
+                                a(href="javascript:void(0);") Забыли пароль?
+
+            .row
+                .col-lg-12
+                    button.dflt-bttn(type="submit") Войти
+            .row
+                .col-lg-12
+                    .intro-info Нет аккаунта? 
+                        a.intro-info__link(href="/list.html") Зарегистрироваться

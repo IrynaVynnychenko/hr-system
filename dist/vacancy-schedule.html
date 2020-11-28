@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Вакансии / График собеседований - Личный кабинет HR</title>
+    <link rel="icon" type="image/png" href="image/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="image/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="image/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__topline">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-9 d-flex align-items-center d-lg-block">
+              <button class="main-menu-show d-lg-none hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="main-logo" href="javascript:void(0);"><img src="image/main-logo.svg" alt="#"></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-5 d-none d-lg-block">
+              <div class="help-contact"><span>У вас есть вопросы?</span><span class="help-contact__dash"></span><a href="mailto:info@mebot24-hr.ru">info@mebot24-hr.ru</a></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-3">
+              <div id="selectVue">
+                <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-3">
+              <div class="profile-display"><a class="profile-display__bttn" href="javascript:void(0);" data-letters="ИН"><span>Иванов Н.П.</span></a>
+                <div class="profile-block">
+                  <div class="profile-block__title">Иванов Н.П.</div>
+                  <div class="profile-block__btns"><a class="btn-correct profile__btn-transparent" href="/profile/">Редактировать профиль</a><a class="btn-out profile__btn-transparent" href="/?logout=yes">Выйти</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__navline d-none d-lg-block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <nav class="main-nav">
+                <ul class="main-menu">
+                  <li class="main-menu__item"><a class="main-menu__link" href="/">Главная</a></li>
+                  <li class="main-menu__item main-menu__item-vacancies"><a class="main-menu__link" href="/vacancy/">Вакансии</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="/company/">Компании</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="/">О системе</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-lg-4"><a class="other-products" href="javascript:void(0);">
+                Другие продукты<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu__block">
+        <nav class="mobile-menu" role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox">
+            <div class="number">5</div>
+            <div class="toggle-block"><span></span><span></span><span></span></div>
+            <div class="mobile" id="menu">
+              <div class="mobile-profile">
+                <div class="mobile-profile__column">
+                  <div class="mobile-profile__bg"><span>ИН</span></div>
+                </div>
+                <div class="mobile-profile__column">
+                  <div class="mobile-profile__name">
+                    <div class="mobile-profile__name-item">Иванов Н.П.</div><a class="mobile-profile__link" href="/fix-company.html">Редактировать профиль<span><img src="./image/arrow-right.svg" alt="#"></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile-block">
+                <div class="mobile-block__list">
+                  <div id="selectVue">
+                    <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+                  </div>
+                </div><a class="mobile-block__item" href="/"><span class="profile-icon"> <img src="./image/icon-1.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Главная</div></a><a class="mobile-block__item" href="/active&amp;archive.html"><span class="profile-icon"> <img src="./image/icon-2.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Вакансии</div><span class="mobile-number active">5</span></a><a class="mobile-block__item" href="/companies.html"><span class="profile-icon"> <img src="./image/icon-3.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Компании</div><span class="mobile-number">2</span></a><a class="mobile-block__item" href="javascript:void(0);"><span class="profile-icon"> <img src="./image/icon-4.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">О системе</div></a><a class="mobile-block__item" href="/login.html"><span class="profile-icon"> <img src="./image/icon-5.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Выход</div></a>
+              </div>
+              <div class="mobile-footer">
+                <div class="mobile-footer__logo"><img src="./image/footer-logo.svg" alt="#"></div><a class="mobile-footer__item mail" href="mailto:info@mebot24.ru"> <span><img src="./image/mail-footer.svg" alt="#"></span>info@mebot24.ru</a><a class="mobile-footer__item tel" href="tel:+84951183619"> <span><img src="./image/tel-footer.svg" alt="#"></span>8 (495)-118-36-19</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="collapse-overlay"></div>
+        <div id="selectVue">
+          <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="info-system-bar" id="sticky">
+        <div class="info-system-bar__navline">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-5 col-lg-6 col-12">
+                <h1 class="info-system-bar__title">Руководитель отдела продаж<span class="info-system-bar__btn"><img src="./image/btn-bottom.svg" alt="#"></span>
+                  <ul class="info-system-bar__list"><a class="info-system-bar__list-link" href="#">
+                      <li class="info-system-bar__list-item">Менеджер по продажам</li></a><a class="info-system-bar__list-link" href="#">
+                      <li class="info-system-bar__list-item">Продуктовый дизайнер</li></a><a class="info-system-bar__list-link" href="#">
+                      <li class="info-system-bar__list-item">HR-директор</li></a><a class="info-system-bar__list-link" href="#">
+                      <li class="info-system-bar__list-item">Руководитель отдела продаж</li></a></ul>
+                </h1>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-12"><a class="dflt-bttn" href="javascript:void(0);">
+                  Запустить найм<svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-3.11727e-07 1.86852L-7.84686e-08 7.20485C-4.42203e-08 7.98836 0.860163 8.46752 1.52635 8.05511L5.67684 5.48577C6.29591 5.10253 6.31099 4.20733 5.70518 3.80345L1.5547 1.03647C0.890145 0.59343 -3.46639e-07 1.06982 -3.11727e-07 1.86852Z" fill="black"/>
+</svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="info-system-bar__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7 col-md-12">
+                <div class="statistic-display">
+                  <div class="statistic-display__heading">
+                    <div class="statistic-display__icon"><img src="image/statistic-display-heading-icon.svg" alt="#"></div>
+                    <div class="statistic-display__info">
+                      <h3 class="statistic-display__title">Статистика с 1 по 31 октября</h3><a class="statistic-display__change-date" href="javascript:void(0);" data-toggle="modal" data-target="#changeDate" type="button">
+                        Изменить дату<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                    </div>
+                  </div>
+                  <ul class="statistic-display__list">
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 100%; background: #FFD441"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FFD441"></span><span class="statistic-display-list-item__title">Резюме</span><span class="statistic-display-list-item__count"><span>1 200 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 87%; background: #FFBF41"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FFBF41"></span><span class="statistic-display-list-item__title">Связались</span><span class="statistic-display-list-item__count"><span>900 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 75%; background: #FFAC41"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FFAC41"></span><span class="statistic-display-list-item__title">Заинтересованы</span><span class="statistic-display-list-item__count"><span>600 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 50%; background: #FF9A41"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FF9A41"></span><span class="statistic-display-list-item__title">Тестирование</span><span class="statistic-display-list-item__count"><span>300 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 40%; background: #FF8841"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FF8841"></span><span class="statistic-display-list-item__title">Собеседование</span><span class="statistic-display-list-item__count"><span>100 </span>чел.</span></span></li>
+                    <li class="statistic-display-list-item"><span class="statistic-display-list-item__bar"><span></span><span style="width: 25%; background: #FF6F41"></span></span><span class="statistic-display-list-item__info"><span class="statistic-display-list-item__mark" style="background: #FF6F41"></span><span class="statistic-display-list-item__title">Выход на работу</span><span class="statistic-display-list-item__count"><span>20 </span>чел.</span></span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                <div class="nearest-interviews">
+                  <div class="nearest-interviews__heading">
+                    <div class="nearest-interviews__icon"><img src="image/nearest-interviews-heading-icon.svg" alt="#"></div>
+                    <div class="nearest-interviews__info">
+                      <h3 class="nearest-interviews__title">Ближайшие собеседования</h3><a class="nearest-interviews__show-more" href="/vacancy-schedule.html">
+                        Смотреть все собеседования<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                      <div class="dflt-schedule">
+                        <div class="dflt-schedule__heading"><span>Сегодня</span></div>
+                        <div class="dflt-schedule__content">
+                          <div class="dflt-schedule__column">
+                            <div class="dflt-schedule__row"><span>15:00</span><span>3 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>17:00</span><span>5 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>18:00</span><span>3 чел.</span></div>
+                          </div>
+                          <div class="dflt-schedule__separator"></div>
+                          <div class="dflt-schedule__column">
+                            <div class="dflt-schedule__row"><span>19:00</span><span>0 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>20:00</span><span>5 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>16:00</span><span>3 чел.</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 d-none d-lg-block">
+                      <div class="dflt-schedule dflt-schedule_ghost">
+                        <div class="dflt-schedule__heading"><span>Завтра</span></div>
+                        <div class="dflt-schedule__content">
+                          <div class="dflt-schedule__column">
+                            <div class="dflt-schedule__row"><span>15:00</span><span>3 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>17:00</span><span>5 чел.</span></div>
+                            <div class="dflt-schedule__row"><span>18:00</span><span>3 чел.</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-system-section">
+        <div class="content-system-section__navline">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <ul class="content-system-section__switch">
+                  <li><a href="/vacancy-resume.html"><span>Резюме</span></a></li>
+                  <li><a href="/worksheet.html"><span>Анкеты</span></a></li>
+                  <li><a href="/vacancy-schedule.html"><span>График собеседований</span></a></li>
+                  <li><a href="/vacancy-info.html"><span>О вакансии</span></a></li>
+                  <li><a href="javascript:void(0);"><span>Действия</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-system-section__content">
+          <div class="container">
+            <div class="row align-items-center vacancy-row">
+              <div class="first-col vacancy-row__col">
+                <h2 class="content-system-section__title">График собеседований</h2>
+              </div>
+              <div class="second-col vacancy-row__col">
+                <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Предстоящие</a>
+                  <ul class="dflt-select__dropdown">
+                    <li><a href="javascript:void(0);">Предстоящие</a></li>
+                    <li><a href="javascript:void(0);">Архивные</a></li>
+                    <li><a href="javascript:void(0);">Все</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="third-col vacancy-row__col"><a class="dflt-bttn" data-toggle="modal" data-target="#addEvent" type="button">Добавить событие в график</a></div>
+              <div class="fourth-col vacancy-row__col">
+                <div class="interview-list">
+                  <div class="interview-list__title">Собеседует:</div>
+                  <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Любой сотрудник</a>
+                    <ul class="dflt-select__dropdown">
+                      <li><a href="javascript:void(0);">Кожевников И.И.</a></li>
+                      <li><a href="javascript:void(0);">Иванов И.И.</a></li>
+                      <li><a href="javascript:void(0);">Кожевников И.И.</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="schedule-date-wrapper">
+                  <div class="schedule-date-wrapper__info"><span class="schedule-date-wrapper__date">10.11.2019</span></div>
+                  <div class="schedule-date-wrapper__list">
+                    <div class="schedule-time-wrapper">
+                      <div class="schedule-time-wrapper__info">
+                        <div class="schedule-time-wrapper__info-top"><span class="schedule-time-wrapper__time">15:00</span><span class="schedule-time-wrapper__status">Ожидается</span></div>
+                        <div class="schedule-time-wrapper__info-bottom">
+                          <div class="interview-list__title">Собеседует:</div>
+                          <div class="interview-list__name">Кожевников И.И.</div>
+                        </div>
+                      </div>
+                      <div class="schedule-time-wrapper__list">
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№1</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№2</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item schedule-list-item_empty">
+                          <div class="schedule-list-item__number">№3</div>
+                          <div class="schedule-list-item__info"><span>Место доступно для записи</span><span><a class="schedule-list-item__bttn" href="javascript:void(0);">Удалить свободное место</a></span></div>
+                        </div>
+                        <div class="schedule-time-wrapper__list-add"><a class="dflt-bttn" href="javascript:void(0);">
+                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Добавить место</a></div>
+                      </div>
+                    </div>
+                    <div class="schedule-time-wrapper">
+                      <div class="schedule-time-wrapper__info">
+                        <div class="schedule-time-wrapper__info-top"><span class="schedule-time-wrapper__time">17:00</span><span class="schedule-time-wrapper__status">Ожидается</span></div>
+                        <div class="schedule-time-wrapper__info-bottom">
+                          <div class="interview-list__title">Собеседует:</div>
+                          <div class="interview-list__name">Кожевников И.И.    </div>
+                        </div>
+                      </div>
+                      <div class="schedule-time-wrapper__list">
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№1</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№2</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№3</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№4</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№5</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№6</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-time-wrapper__list-add"><a class="dflt-bttn" href="javascript:void(0);">
+                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Добавить место</a></div>
+                      </div>
+                    </div>
+                    <div class="schedule-date-wrapper__list">
+                      <div class="schedule-time-wrapper">
+                        <div class="schedule-time-wrapper__info">
+                          <div class="schedule-time-wrapper__info-top"><span class="schedule-time-wrapper__time">10:00</span><span class="schedule-time-wrapper__status">Ожидается</span></div>
+                          <div class="schedule-time-wrapper__info-bottom"><a class="schedule-time-wrapper__remove" href="javascript:void(0);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.97939 10.062L10.0207 6.02072M10.0207 10.062L5.97934 6.02066" stroke="#828282" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="8" cy="8" r="7.5" stroke="#828282"/>
+</svg><br><span>Удалить данное время из графика</span></a></div>
+                        </div>
+                        <div class="schedule-time-wrapper__list">
+                          <div class="schedule-list-item schedule-list-item_empty">
+                            <div class="schedule-list-item__number">№1</div>
+                            <div class="schedule-list-item__info"><span>Место доступно для записи</span><span><a class="schedule-list-item__bttn" href="javascript:void(0);">Удалить свободное место</a></span></div>
+                          </div>
+                          <div class="schedule-list-item schedule-list-item_empty">
+                            <div class="schedule-list-item__number">№2</div>
+                            <div class="schedule-list-item__info"><span>Место доступно для записи</span><span><a class="schedule-list-item__bttn" href="javascript:void(0);">Удалить свободное место</a></span></div>
+                          </div>
+                          <div class="schedule-list-item schedule-list-item_empty">
+                            <div class="schedule-list-item__number">№3</div>
+                            <div class="schedule-list-item__info"><span>Место доступно для записи</span><span><a class="schedule-list-item__bttn" href="javascript:void(0);">Удалить свободное место</a></span></div>
+                          </div>
+                          <div class="schedule-time-wrapper__list-add"><a class="dflt-bttn" href="javascript:void(0);">
+                              <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Добавить место</a></div>
+                        </div>
+                      </div>
+                      <div class="schedule-time-wrapper">
+                        <div class="schedule-time-wrapper__info">
+                          <div class="schedule-time-wrapper__info-top"><span class="schedule-time-wrapper__time">17:00</span><span class="schedule-time-wrapper__status schedule-time-wrapper__status_done">Завершено    </span></div>
+                          <div class="schedule-time-wrapper__info-bottom">
+                            <div class="interview-list__title interview-list__title-finish">Собеседовал:</div>
+                            <div class="interview-list__name">Кожевников И.И.    </div>
+                          </div>
+                        </div>
+                        <div class="schedule-time-wrapper__list schedule-report">
+                          <div class="schedule-list-item">
+                            <div class="schedule-list-item__number">№1</div>
+                            <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><span class="schedule-list-item__status-1 schedule-list-item__status-1_done" href="javascript:void(0);">Неявка</span></span></div>
+                          </div>
+                          <div class="schedule-list-item">
+                            <div class="schedule-list-item__number">№2</div>
+                            <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><span class="schedule-list-item__status-1 schedule-list-item__status-1_done" href="javascript:void(0);">Неявка</span></span></div>
+                          </div>
+                          <div class="schedule-list-item">
+                            <div class="schedule-list-item__number">№3</div>
+                            <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="dflt-bttn" data-toggle="modal" data-target="#addReport" type="button">Добавить отчет</a></span><span><span class="schedule-list-item__status-2 schedule-list-item__status-2_done" href="javascript:void(0);">Явка</span></span></div>
+                          </div>
+                          <div class="schedule-list-item">
+                            <div class="schedule-list-item__number">№4</div>
+                            <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__bttn" data-toggle="modal" data-target="#correctReport" type="button">Отчет</a></span><span><span class="schedule-list-item__status-2 schedule-list-item__status-2_done" href="javascript:void(0);">Явка</span></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-date-wrapper">
+                  <div class="schedule-date-wrapper__info"><span class="schedule-date-wrapper__date">11.11.2019</span></div>
+                  <div class="schedule-date-wrapper__list">
+                    <div class="schedule-time-wrapper">
+                      <div class="schedule-time-wrapper__info">
+                        <div class="schedule-time-wrapper__info-top"><span class="schedule-time-wrapper__time">15:00</span><span class="schedule-time-wrapper__status">Ожидается</span></div>
+                        <div class="schedule-time-wrapper__info-bottom">
+                          <div class="interview-list__title">Собеседует:</div>
+                          <div class="interview-list__name">Кожевников И.И.</div>
+                        </div>
+                      </div>
+                      <div class="schedule-time-wrapper__list">
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№1</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№2</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item schedule-list-item_empty">
+                          <div class="schedule-list-item__number">№3</div>
+                          <div class="schedule-list-item__info"><span>Место доступно для записи</span><span><a class="schedule-list-item__bttn" href="javascript:void(0);">Удалить свободное место</a></span></div>
+                        </div>
+                        <div class="schedule-time-wrapper__list-add"><a class="dflt-bttn" href="javascript:void(0);">
+                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Добавить место</a></div>
+                      </div>
+                    </div>
+                    <div class="schedule-time-wrapper">
+                      <div class="schedule-time-wrapper__info">
+                        <div class="schedule-time-wrapper__info-top"><span class="schedule-time-wrapper__time">17:00</span><span class="schedule-time-wrapper__status">Ожидается</span></div>
+                        <div class="schedule-time-wrapper__info-bottom">
+                          <div class="interview-list__title">Собеседует:</div>
+                          <div class="interview-list__name">Кожевников И.И.    </div>
+                        </div>
+                      </div>
+                      <div class="schedule-time-wrapper__list">
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№1</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№2</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№3</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№4</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№5</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-list-item">
+                          <div class="schedule-list-item__number">№6</div>
+                          <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><a class="schedule-list-item__status-1" href="javascript:void(0);">Неявка</a></span><span><a class="schedule-list-item__status-2" href="javascript:void(0);">Явка</a></span></div>
+                        </div>
+                        <div class="schedule-time-wrapper__list-add"><a class="dflt-bttn" href="javascript:void(0);">
+                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Добавить место</a></div>
+                      </div>
+                    </div>
+                    <div class="schedule-date-wrapper__list">
+                      <div class="schedule-time-wrapper">
+                        <div class="schedule-time-wrapper__info">
+                          <div class="schedule-time-wrapper__info-top"><span class="schedule-time-wrapper__time">10:00</span><span class="schedule-time-wrapper__status">Ожидается</span></div>
+                          <div class="schedule-time-wrapper__info-bottom"><a class="schedule-time-wrapper__remove" href="javascript:void(0);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.97939 10.062L10.0207 6.02072M10.0207 10.062L5.97934 6.02066" stroke="#828282" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="8" cy="8" r="7.5" stroke="#828282"/>
+</svg><br><span>Удалить данное время из графика</span></a></div>
+                        </div>
+                        <div class="schedule-time-wrapper__list">
+                          <div class="schedule-list-item schedule-list-item_empty">
+                            <div class="schedule-list-item__number">№1</div>
+                            <div class="schedule-list-item__info"><span>Место доступно для записи</span><span><a class="schedule-list-item__bttn" href="javascript:void(0);">Удалить свободное место</a></span></div>
+                          </div>
+                          <div class="schedule-list-item schedule-list-item_empty">
+                            <div class="schedule-list-item__number">№2</div>
+                            <div class="schedule-list-item__info"><span>Место доступно для записи</span><span><a class="schedule-list-item__bttn" href="javascript:void(0);">Удалить свободное место</a></span></div>
+                          </div>
+                          <div class="schedule-list-item schedule-list-item_empty">
+                            <div class="schedule-list-item__number">№3</div>
+                            <div class="schedule-list-item__info"><span>Место доступно для записи</span><span><a class="schedule-list-item__bttn" href="javascript:void(0);">Удалить свободное место</a></span></div>
+                          </div>
+                          <div class="schedule-time-wrapper__list-add"><a class="dflt-bttn" href="javascript:void(0);">
+                              <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Добавить место</a></div>
+                        </div>
+                      </div>
+                      <div class="schedule-time-wrapper">
+                        <div class="schedule-time-wrapper__info">
+                          <div class="schedule-time-wrapper__info-top"><span class="schedule-time-wrapper__time">17:00</span><span class="schedule-time-wrapper__status schedule-time-wrapper__status_done">Завершено    </span></div>
+                          <div class="schedule-time-wrapper__info-bottom">
+                            <div class="interview-list__title interview-list__title-finish">Собеседовал:</div>
+                            <div class="interview-list__name">Кожевников И.И.    </div>
+                          </div>
+                        </div>
+                        <div class="schedule-time-wrapper__list schedule-report">
+                          <div class="schedule-list-item">
+                            <div class="schedule-list-item__number">№1</div>
+                            <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><span class="schedule-list-item__status-1 schedule-list-item__status-1_done" href="javascript:void(0);">Неявка</span></span></div>
+                          </div>
+                          <div class="schedule-list-item">
+                            <div class="schedule-list-item__number">№2</div>
+                            <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__link" href="javascript:void(0);">Резюме</a></span><span><span class="schedule-list-item__status-1 schedule-list-item__status-1_done" href="javascript:void(0);">Неявка</span></span></div>
+                          </div>
+                          <div class="schedule-list-item">
+                            <div class="schedule-list-item__number">№3</div>
+                            <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="dflt-bttn" data-toggle="modal" data-target="#addReport" type="button">Добавить отчет</a></span><span><span class="schedule-list-item__status-2 schedule-list-item__status-2_done" href="javascript:void(0);">Явка</span></span></div>
+                          </div>
+                          <div class="schedule-list-item">
+                            <div class="schedule-list-item__number">№4</div>
+                            <div class="schedule-list-item__info"><span>Иванов Василий Петрович, 25 лет</span><span><a class="schedule-list-item__bttn" data-toggle="modal" data-target="#correctReport" type="button">Отчет</a></span><span><span class="schedule-list-item__status-2 schedule-list-item__status-2_done" href="javascript:void(0);">Явка</span></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="fixed-nav">
+      <div class="fixed-nav__bar"><a class="fixed-nav__bar-bttn" href="javascript:void(0);"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.8145 0.240629C14.5148 -0.0802096 14.016 -0.0802096 13.7058 0.240629C13.4061 0.550628 13.4061 1.06657 13.7058 1.37585L19.3277 7.19068H0.776183C0.343728 7.1914 0 7.54693 0 7.99422C0 8.44151 0.343728 8.8086 0.776183 8.8086H19.3277L13.7058 14.6126C13.4061 14.9334 13.4061 15.4501 13.7058 15.7594C14.016 16.0802 14.5155 16.0802 14.8145 15.7594L21.7674 8.56797C22.0775 8.25797 22.0775 7.74203 21.7674 7.43275L14.8145 0.240629Z" fill="#828282"/>
+</svg></a>
+        <div class="fixed-nav__bar-element fixed-nav__bar-element_1" data-count="5"><span>Вакансии</span></div>
+      </div>
+      <div class="fixed-nav__content">
+        <div class="vacancy-display vacancy-display_2">
+          <div class="vacancy-display__heading">
+            <h3 class="vacancy-display__title"><span>Вакансии</span></h3>
+            <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Все вакансии</a>
+              <ul class="dflt-select__dropdown">
+                <li><a href="javascript:void(0);">Все вакансии</a></li>
+                <li><a href="javascript:void(0);">Только активные</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="vacancy-display__list scroll-wrapper" id="fixedNavVacancy">
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">Р</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Руководитель отдела продаж </span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
+          </ul><a class="dflt-bttn" href="/no-vacancy.html">
+            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
+<path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
+</svg>Создать вакансию</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('load', function() {
+      	const fixedNavVacancyWrapper = document.querySelector('#fixedNavVacancy');
+      	const fixedNavVacancyScroll = new PerfectScrollbar(fixedNavVacancyWrapper, {
+      		suppressScrollX: true
+      	});
+      });
+    </script>
+    <div class="modal fade calendar" id="changeDate" tabindex="-1" role="dialog" aria-labelledby="changeDateLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></button>
+          <div class="modal-body">
+            <form class="calendar__form" action="#"></form>
+            <label class="calendar__title" for="date">Дата статистики</label>
+            <input class="custom-calendar" id="date" type="text" name="date" placeholder="23/01/2020">
+            <button class="new-account__row-btn" type="submit">Изменить даты</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade correctReport" id="correctReport" tabindex="-1" role="dialog" aria-labelledby="correctReportLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></button>
+          <div class="accordion">
+            <div class="correctReport-title">Отчет</div>
+            <div class="card-body"> 
+              <div class="accordion-col__small">
+                <div class="accordion-col__small-block">
+                  <div class="accordion-person__pict">ИН</div>
+                  <div class="accordion-person__name">Иванов Иван Петрович</div>
+                </div>
+                <div class="accordion-col__small-name">Возраст:<span>22 года</span></div>
+                <div class="accordion-col__small-name">E-mail:<span>   <a class="link" href="mailto:info@rambler.ru">info@rambler.ru</a></span></div>
+                <div class="accordion-col__small-name">Тел:<span> <a class="link" href="tel:+79998889988">+7 999 888 99 88       </a></span></div><a class="dflt-bttn" href="javascript:void(0);">Резюме</a>
+              </div>
+              <div class="accordion-col__big">
+                <h3 class="actions__title">Пройденные тесты</h3>
+                <div class="test-row test-slider">
+                  <div class="test-item">
+                    <div class="test-item__top">
+                      <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                    </div>
+                    <div class="test-item__bottom">
+                      <div class="test-item__bottom-text"><span>120</span>/140</div>
+                      <div class="test-item__bottom-text">Основы продаж</div>
+                      <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                        <ul class="dflt-select__dropdown">
+                          <li><a href="javascript:void(0);">Пригласить на должность</a></li>
+                          <li><a href="javascript:void(0);">Тестировать</a></li>
+                          <li><a href="javascript:void(0);">Собеседовать</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="test-item">
+                    <div class="test-item__top test-item__top-deny">
+                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.5" cy="4.5" r="4.5" fill="white"/>
+<path d="M3.93707 1.77771L4.02632 5.37717H4.96336L5.05261 1.77771H3.93707ZM4.49484 7.23639C4.83322 7.23639 5.10095 6.97982 5.10095 6.6526C5.10095 6.32537 4.83322 6.0688 4.49484 6.0688C4.15646 6.0688 3.88873 6.32537 3.88873 6.6526C3.88873 6.97982 4.15646 7.23639 4.49484 7.23639Z" fill="#FF6363"/>
+</svg>Нет проверки
+                    </div>
+                    <div class="test-item__bottom">
+                      <div class="test-item__bottom-text"><span>XXX</span>/140</div>
+                      <div class="test-item__bottom-text">Тест на психологию</div>
+                      <div class="dflt-bttn">Проверить</div>
+                    </div>
+                  </div>
+                  <div class="test-item">
+                    <div class="test-item__top">
+                      <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                    </div>
+                    <div class="test-item__bottom">
+                      <div class="test-item__bottom-text"><span>120</span>/140</div>
+                      <div class="test-item__bottom-text">Основы продаж</div>
+                      <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                        <ul class="dflt-select__dropdown">
+                          <li><a href="javascript:void(0);">Пригласить на должность</a></li>
+                          <li><a href="javascript:void(0);">Тестировать</a></li>
+                          <li><a href="javascript:void(0);">Собеседовать</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="test-item">
+                    <div class="test-item__top test-item__top-deny">
+                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.5" cy="4.5" r="4.5" fill="white"/>
+<path d="M3.93707 1.77771L4.02632 5.37717H4.96336L5.05261 1.77771H3.93707ZM4.49484 7.23639C4.83322 7.23639 5.10095 6.97982 5.10095 6.6526C5.10095 6.32537 4.83322 6.0688 4.49484 6.0688C4.15646 6.0688 3.88873 6.32537 3.88873 6.6526C3.88873 6.97982 4.15646 7.23639 4.49484 7.23639Z" fill="#FF6363"/>
+</svg>Необходима проверка
+                    </div>
+                    <div class="test-item__bottom">
+                      <div class="test-item__bottom-text"><span>XXX</span>/140</div>
+                      <div class="test-item__bottom-text">Тест на психологию</div>
+                      <div class="dflt-bttn">Проверить</div>
+                    </div>
+                  </div>
+                  <div class="test-item">
+                    <div class="test-item__top">
+                      <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                    </div>
+                    <div class="test-item__bottom">
+                      <div class="test-item__bottom-text"><span>120</span>/140</div>
+                      <div class="test-item__bottom-text">Основы продаж</div>
+                      <div class="dflt-select"><a class="dflt-select__bttn" href="javascript:void(0);">Действия</a>
+                        <ul class="dflt-select__dropdown">
+                          <li><a href="javascript:void(0);">Пригласить на должность</a></li>
+                          <li><a href="javascript:void(0);">Тестировать</a></li>
+                          <li><a href="javascript:void(0);">Собеседовать</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-bottom">
+                  <h3 class="actions__title">Комментарий руководителя:</h3>
+                  <div class="accordion-text-field">Поведение при собеседовании умеренное, большой опыт работы, но на повторные вопросы об отношении к бывшему коллективу отвечал с ухмылкой.</div>
+                  <div class="accordion-title">
+                    <h3 class="actions__title">Пройденное собеседование</h3><a class="accordion-title__link" href="javascript:void(0);" data-toggle="modal" data-target="#addReport">Редактировать</a>
+                  </div>
+                  <div class="accordion-row">
+                    <div class="accordion-row__statistic">
+                      <div class="accordion-row__statistic-row">
+                        <div class="statistic-row__item">Дата:</div>
+                        <div class="statistic-row__item statistic-row__item-actual">10.11.2019</div>
+                      </div>
+                      <div class="accordion-row__statistic-row">
+                        <div class="statistic-row__item">Время:</div>
+                        <div class="statistic-row__item statistic-row__item-actual">10:00</div>
+                      </div>
+                      <div class="accordion-row__statistic-row">
+                        <div class="statistic-row__item">Статус:</div>
+                        <div class="statistic-row__item accordion-status__desc accordion-status__red">Отклонен</div>
+                      </div>
+                    </div>
+                    <div class="accordion-row__grafic">
+                      <div class="accordion-row__grafic-item">
+                        <div class="accordion-row__grafic-rating">
+                          <div class="percentage-circle circle-6 circle-yellow">
+                            <div class="grafic-assesment"><span>6</span>/10   </div>
+                          </div>
+                        </div>
+                        <div class="accordion-row__grafic-text">Общая оценка</div>
+                      </div>
+                      <div class="accordion-row__grafic-item">
+                        <div class="accordion-row__grafic-rating">
+                          <div class="percentage-circle circle-8 circle-green">
+                            <div class="grafic-assesment"><span>8</span>/10</div>
+                          </div>
+                        </div>
+                        <div class="accordion-row__grafic-text">Навыки</div>
+                      </div>
+                      <div class="accordion-row__grafic-item">
+                        <div class="accordion-row__grafic-rating">
+                          <div class="percentage-circle circle-4 circle-red">
+                            <div class="grafic-assesment"><span>4</span>/10</div>
+                          </div>
+                        </div>
+                        <div class="accordion-row__grafic-text">Поведение</div>
+                      </div>
+                      <div class="accordion-row__grafic-item">
+                        <div class="accordion-row__grafic-rating">
+                          <div class="percentage-circle circle-5 circle-orange">
+                            <div class="grafic-assesment"><span>5</span>/10</div>
+                          </div>
+                        </div>
+                        <div class="accordion-row__grafic-text">Перспектива</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade addReport" id="addReport" tabindex="-1" role="dialog" aria-labelledby="addReportLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></button>
+          <div class="modal-body">
+            <form class="addReport-form" action="#">
+              <div class="calendar__title">Добавьте отчет по пройденному собеседованию с кандидатом</div>
+              <div class="addReport-item">
+                <div class="addReport-item__pict">ИИ</div>
+                <div class="addReport-item__name">Иванов Иван Петрович</div>
+              </div>
+              <div class="addReport-desc">Заполните необходимые данные, чтобы они отразились в <a class="addReport-desc__link" href="/worksheet.pug">анкете кандидата</a></div>
+              <div class="addReport-title">Пройденное собеседование</div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="rating">
+                    <div class="rating-title">Общая оценка: <span>8</span>/10</div>
+                    <div class="rating-row">
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="rating">
+                    <div class="rating-title">Навыки: <span>6</span>/10</div>
+                    <div class="rating-row">
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg">
+                        <div class="rating-bg__item"></div>
+                      </div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="rating">
+                    <div class="rating-title">Поведение: <span>0</span>/10</div>
+                    <div class="rating-row">
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="rating">
+                    <div class="rating-title">Перспектива: <span>0</span>/10</div>
+                    <div class="rating-row">
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                      <div class="rating-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="addReport-title">Статус кандидата при приеме на должность</div>
+              <div class="addReport-btns"><a class="schedule-list-item__status-2" href="javascript:void(0);">Принят</a><a class="schedule-list-item__status-1 schedule-list-item__status-1_done" href="javascript:void(0);">Отклонен  </a></div>
+              <div class="addReport-title">Пройденные тесты</div>
+              <div class="test-row">
+                <div class="test-item">
+                  <div class="test-item__top">
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                  </div>
+                  <div class="test-item__bottom">
+                    <div class="test-item__bottom-text"><span>120</span>/140</div>
+                    <div class="test-item__bottom-text">Основы продаж</div>
+                  </div>
+                </div>
+                <div class="test-item">
+                  <div class="test-item__top">
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                  </div>
+                  <div class="test-item__bottom">
+                    <div class="test-item__bottom-text"><span>120</span>/140</div>
+                    <div class="test-item__bottom-text">Основы продаж</div>
+                  </div>
+                </div>
+                <div class="test-item">
+                  <div class="test-item__top">
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                  </div>
+                  <div class="test-item__bottom">
+                    <div class="test-item__bottom-text"><span>120</span>/140</div>
+                    <div class="test-item__bottom-text">Основы продаж</div>
+                  </div>
+                </div>
+                <div class="test-item">
+                  <div class="test-item__top">
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                  </div>
+                  <div class="test-item__bottom">
+                    <div class="test-item__bottom-text"><span>120</span>/140</div>
+                    <div class="test-item__bottom-text">Основы продаж</div>
+                  </div>
+                </div>
+                <div class="test-item">
+                  <div class="test-item__top">
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                  </div>
+                  <div class="test-item__bottom">
+                    <div class="test-item__bottom-text"><span>120</span>/140</div>
+                    <div class="test-item__bottom-text">Основы продаж</div>
+                  </div>
+                </div>
+                <div class="test-item">
+                  <div class="test-item__top">
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+<path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Проверено
+                  </div>
+                  <div class="test-item__bottom">
+                    <div class="test-item__bottom-text"><span>120</span>/140</div>
+                    <div class="test-item__bottom-text">Основы продаж</div>
+                  </div>
+                </div>
+              </div>
+              <label class="addReport-title" for="director-comment">Комментарий руководителя</label>
+              <textarea class="castom-textarea" id="director-comment" name="director-comment" placeholder="Какие особенности в поведении и характере кандидата вы заметили?"></textarea>
+              <button class="new-account__row-btn" type="submit">Добавить отчет    </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade addEvent" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="addEventLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></button>
+          <div class="modal-body">
+            <div class="addEvent-title">Событие в графике собеседований</div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="addEvent-block addEvent-block__date">
+                  <label class="addEvent-block__label" for="eventDate">Дата</label>
+                  <input class="addEvent-block__input" id="eventDate" type="text" name="addEvent-date" placeholder="12.12.2020">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="addEvent-block addEvent-block__time">
+                  <label class="addEvent-block__label" for="eventTime">Время</label>
+                  <div class="dflt-select"><a class="dflt-select__bttn addEvent-block__input" href="javascript:void(0);">18:00</a>
+                    <ul class="dflt-select__dropdown">
+                      <li><a href="javascript:void(0);">17:00</a></li>
+                      <li><a href="javascript:void(0);">17:15</a></li>
+                      <li><a href="javascript:void(0);">17:30</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="addEvent-block">
+                  <label class="addEvent-block__label" for="addEvent-block__number">Количество канд-ов</label>
+                  <input class="addEvent-block__number addEvent-block__input" id="addEvent-block__number" type="number" name="addEvent-persons" placeholder="45">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="addEvent-block addEvent-block__special">
+                  <label class="addEvent-block__label">Кто собеседует:</label>
+                  <div class="dflt-select"><a class="dflt-select__bttn addEvent-block__input" href="javascript:void(0);">Любой сотрудник</a>
+                    <ul class="dflt-select__dropdown">
+                      <li><a href="javascript:void(0);">Иванов И.И.</a></li>
+                      <li><a href="javascript:void(0);">Кожевников И.И.</a></li>
+                      <li><a href="javascript:void(0);">Плужников И.И.</a></li>
+                      <li><a href="javascript:void(0);">Кожевников И.И.</a></li>
+                      <li><a href="javascript:void(0);">Плужников И.И.</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="addEvent-block__label">Выбор связи</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-6">
+                <div class="addEvent-block"><a class="addEvent-block__btn addEvent-block__green active" href="javascript:void(0);">WhatsApp</a></div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-6">
+                <div class="addEvent-block"><a class="addEvent-block__btn addEvent-block__blue" href="javascript:void(0);">Skype</a></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="addEvent-block">
+                  <label class="addEvent-block__label" for="addEvent-block__textarea">Ссылка на группу</label>
+                  <textarea class="addEvent-block__input addEvent-block__textarea" id="addEvent-block__textarea" name="addEvent-block__textarea" placeholder="https://www.figma.com/file/O6GcB053NJ7YaxgPTp2FOU/%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D0%B5%D1%82-HR?node-id=48%3A21"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-12"><a class="dflt-bttn" href="javascript:void(0);">Добавить событие</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

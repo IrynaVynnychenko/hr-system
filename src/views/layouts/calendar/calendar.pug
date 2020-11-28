@@ -1,0 +1,14 @@
+#changeDate.modal.fade.calendar(tabindex='-1' role='dialog' aria-labelledby='changeDateLabel' aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+                span(aria-hidden='true') 
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+            .modal-body
+                form.calendar__form(action="#")
+                label(for="date").calendar__title Дата статистики
+                input.custom-calendar#date(type="text" name="date" placeholder="23/01/2020")
+                button(type="submit").new-account__row-btn Изменить даты

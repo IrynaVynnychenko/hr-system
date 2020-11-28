@@ -1,0 +1,346 @@
+.mobile-menu {
+  display: none;
+  height: auto;
+  z-index: 104;
+  align-items: center;
+  &__block {
+    justify-content: space-between;
+    display: none;
+    background: #ffffff;
+    box-shadow: 0px 4px 7px rgba(52, 59, 118, 0.09);
+    padding: 14px 16px;
+    display: none;
+    min-height: 55px;
+    align-items: center;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 20px;
+    color: #333333;
+  }
+}
+
+@media (max-width: 991px) {
+  .header__topline {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+    &__block {
+      display: flex;
+      position: fixed;
+      width: 100%;
+      left: 0px;
+      top: 0px;
+      z-index: 103;
+    }
+  }
+}
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+.menuToggle {
+  display: block;
+  position: relative;
+  top: 3px;
+  right: 0px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.menuToggle {
+  a {
+    transition: color 0.3s ease;
+  }
+  input {
+    display: block;
+    width: 21px;
+    height: 17px;
+    position: absolute;
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 104; /* and place it over the hamburger */
+    top: 2px;
+    left: -4px;
+    -webkit-touch-callout: none;
+  }
+}
+/*
+  * Just a quick hamburger
+  */
+.menuToggle .toggle-block span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  margin-bottom: 4px;
+  position: relative;
+
+  background: #333333;
+  border-radius: 3px;
+
+  z-index: 106;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.menuToggle .toggle-block span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.menuToggle .toggle-block span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+
+.menuToggle input:checked ~ .toggle-block {
+  z-index: 104;
+  position: relative;
+  pointer-events: none;
+}
+
+.menuToggle input:checked ~ .toggle-block span {
+  opacity: 1;
+  transform: rotate(45deg) translate(4.5px, 4px);
+  width: 14px;
+  background: #333333;
+}
+
+.menuToggle input:checked ~ .number {
+  display: none;
+}
+
+/*
+  * But let's hide the middle one.
+  */
+.menuToggle input:checked ~ .toggle-block span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+  * Ohyeah and the last one should go the other direction
+  */
+.menuToggle input:checked ~ .toggle-block span:last-child {
+  transform: rotate(-45deg) translate(-2.5px, -1px);
+  width: 14px;
+}
+
+/*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+#menu {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 47px;
+  left: 0px;
+  z-index: 103;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  background-color: #f0f1fa;
+}
+
+/*
+  * And let's slide it in from the left
+  */
+.menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+.menuToggle input:checked ~ #menu.mobile {
+  transform: none;
+}
+
+@media (max-width: 991px) {
+  .header {
+    position: absolute;
+    content: "";
+    width: 100%;
+    z-index: 3;
+    height: 54px;
+  }
+}
+
+.collapse-overlay {
+  opacity: 0;
+  background: rgba(51, 51, 51, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.15s ease-in-out;
+  &.show {
+    opacity: 1;
+    z-index: 102;
+    height: 100vh;
+  }
+}
+
+.mobile {
+  &-profile {
+    background: #ffffff;
+    padding: 18px 20px;
+    display: flex;
+    border-bottom: 1px solid #cdcede;
+    align-items: center;
+    &__bg {
+      background: #67b7f0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      span {
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.mobile {
+  &.show {
+    box-shadow: 0px 4px 20px rgba(56, 56, 81, 0.17);
+  }
+  &-block {
+    background: #ffffff;
+    padding: 22px 16px 66px 16px;
+    position: relative;
+    &__item {
+      display: flex;
+      margin-bottom: 14px;
+      align-items: center;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: #333333;
+    }
+    &__list-top {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        width: calc(100% + 32px);
+        height: 1px;
+        background-color: #e0e0e0;
+        left: -16px;
+      }
+    }
+    &__list-bottom {
+      .mobile-block__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        margin-top: 16px;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 21px;
+        color: #333333;
+        text-transform: none;
+        &:first-child {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  &-number {
+    margin-left: 16px;
+    width: 21px;
+    height: 21px;
+    background: #cdcede;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.active {
+      background: #ff7557;
+    }
+  }
+  &-footer {
+    background: #f0f1fa;
+    padding: 22px 16px 48px 16px;
+    &__logo {
+      height: 19px;
+      max-width: 75px;
+      width: 100%;
+      margin-bottom: 3px;
+    }
+    &__item {
+      display: flex;
+      font-weight: normal;
+      align-items: center;
+      font-size: 14px;
+      line-height: 21px;
+      text-decoration-line: underline;
+      color: #4f4f4f;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 10px 16px;
+      width: 100%;
+      height: 42px;
+      margin-bottom: 16px;
+      &.tel {
+        span {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      span {
+        width: 13px;
+        height: 10px;
+        margin-right: 16px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.mobile-menu__block {
+  .header-top__block-right {
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu__block {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}

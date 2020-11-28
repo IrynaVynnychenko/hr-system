@@ -1,0 +1,60 @@
+.mobile-menu__block
+    nav(role='navigation').mobile-menu
+        #menuToggle
+            input(type='checkbox')
+            .number 5
+            .toggle-block
+                span
+                span
+                span
+
+            #menu.mobile
+                .mobile-profile
+                    .mobile-profile__column
+                        .mobile-profile__bg
+                            span ИН
+                    .mobile-profile__column
+                        .mobile-profile__name
+                            .mobile-profile__name-item Иванов Н.П.
+                            a.mobile-profile__link(href="/fix-company.html") Редактировать профиль
+                                span
+                                    img(src="./image/arrow-right.svg" alt="#")
+                .mobile-block
+                    .mobile-block__list
+                        include ../dropdown/dropdown.pug
+                    a.mobile-block__item(href="/")
+                        span.profile-icon 
+                            img(src="./image/icon-1.svg" alt="#")
+                        .mobile-block__item-text Главная
+                    a.mobile-block__item(href="/active&archive.html")
+                        span.profile-icon 
+                            img(src="./image/icon-2.svg" alt="#")
+                        .mobile-block__item-text Вакансии
+                        span.mobile-number.active 5
+                    a.mobile-block__item(href="/companies.html")
+                        span.profile-icon 
+                            img(src="./image/icon-3.svg" alt="#")
+                        .mobile-block__item-text Компании
+                        span.mobile-number 2
+                    a.mobile-block__item(href="javascript:void(0);")
+                        span.profile-icon 
+                            img(src="./image/icon-4.svg" alt="#")
+                        .mobile-block__item-text О системе
+                    a.mobile-block__item(href="/login.html")
+                        span.profile-icon 
+                            img(src="./image/icon-5.svg" alt="#")
+                        .mobile-block__item-text Выход
+                .mobile-footer
+                    .mobile-footer__logo
+                        img(src="./image/footer-logo.svg" alt="#")
+                    a.mobile-footer__item.mail(href="mailto:info@mebot24.ru") 
+                        span
+                            img(src="./image/mail-footer.svg" alt="#")
+                        | info@mebot24.ru
+                    a.mobile-footer__item.tel(href="tel:+84951183619") 
+                        span
+                            img(src="./image/tel-footer.svg" alt="#")
+                        | 8 (495)-118-36-19
+
+    .collapse-overlay
+    include ../dropdown/dropdown.pug

@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title Главная - Личный кабинет HR
+
+		include layouts/seo.pug
+	body
+
+		include layouts/header/header.pug
+		include layouts/fixed-nav/fixed-nav.pug
+		main.main
+			.container
+				.row
+					.col-xl-3.col-lg-4.d-none.d-lg-block
+						include layouts/my-vacancies/my-vacancies.pug
+
+					.col-xl-9.col-lg-8
+						include layouts/important/important.pug
+						include layouts/actions/actions.pug
+
+		include layouts/scripts.pug

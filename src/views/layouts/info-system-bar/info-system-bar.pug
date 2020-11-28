@@ -1,0 +1,161 @@
+.info-system-bar__navline
+	.container
+		.row.align-items-center
+			.col-xl-5.col-lg-6.col-12
+				h1.info-system-bar__title
+					| Руководитель отдела продаж
+					span.info-system-bar__btn
+						img(src="./image/btn-bottom.svg" alt="#")
+					ul.info-system-bar__list
+						a.info-system-bar__list-link(href="#")
+							li.info-system-bar__list-item Менеджер по продажам
+						a.info-system-bar__list-link(href="#")
+							li.info-system-bar__list-item Продуктовый дизайнер
+						a.info-system-bar__list-link(href="#")
+							li.info-system-bar__list-item HR-директор
+						a.info-system-bar__list-link(href="#")
+							li.info-system-bar__list-item Руководитель отдела продаж
+			.col-xl-3.col-lg-3.col-md-6.col-12
+				a.dflt-bttn(href="javascript:void(0);")
+					| Запустить найм
+					<svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M-3.11727e-07 1.86852L-7.84686e-08 7.20485C-4.42203e-08 7.98836 0.860163 8.46752 1.52635 8.05511L5.67684 5.48577C6.29591 5.10253 6.31099 4.20733 5.70518 3.80345L1.5547 1.03647C0.890145 0.59343 -3.46639e-07 1.06982 -3.11727e-07 1.86852Z" fill="black"/>
+					</svg>
+.info-system-bar__content
+	.container
+		.row
+			.col-lg-7.col-md-12
+				.statistic-display
+					.statistic-display__heading
+						.statistic-display__icon
+							img(src="image/statistic-display-heading-icon.svg" alt="#")
+						.statistic-display__info
+							h3.statistic-display__title
+								| Статистика с 1 по 31 октября
+							a.statistic-display__change-date(href="javascript:void(0);" data-toggle="modal" data-target="#changeDate" type="button")
+								| Изменить дату
+								<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+					ul.statistic-display__list
+						li.statistic-display-list-item
+							span.statistic-display-list-item__bar
+								span
+								span(style="width: 100%; background: #FFD441")
+							span.statistic-display-list-item__info
+								span.statistic-display-list-item__mark(style="background: #FFD441")
+								span.statistic-display-list-item__title
+									| Резюме
+								span.statistic-display-list-item__count
+									span 1 200 
+									| чел.
+						li.statistic-display-list-item
+							span.statistic-display-list-item__bar
+								span
+								span(style="width: 87%; background: #FFBF41")
+							span.statistic-display-list-item__info
+								span.statistic-display-list-item__mark(style="background: #FFBF41")
+								span.statistic-display-list-item__title
+									| Связались
+								span.statistic-display-list-item__count
+									span 900 
+									| чел.
+						li.statistic-display-list-item
+							span.statistic-display-list-item__bar
+								span
+								span(style="width: 75%; background: #FFAC41")
+							span.statistic-display-list-item__info
+								span.statistic-display-list-item__mark(style="background: #FFAC41")
+								span.statistic-display-list-item__title
+									| Заинтересованы
+								span.statistic-display-list-item__count
+									span 600 
+									| чел.
+						li.statistic-display-list-item
+							span.statistic-display-list-item__bar
+								span
+								span(style="width: 50%; background: #FF9A41")
+							span.statistic-display-list-item__info
+								span.statistic-display-list-item__mark(style="background: #FF9A41")
+								span.statistic-display-list-item__title
+									| Тестирование
+								span.statistic-display-list-item__count
+									span 300 
+									| чел.
+						li.statistic-display-list-item
+							span.statistic-display-list-item__bar
+								span
+								span(style="width: 40%; background: #FF8841")
+							span.statistic-display-list-item__info
+								span.statistic-display-list-item__mark(style="background: #FF8841")
+								span.statistic-display-list-item__title
+									| Собеседование
+								span.statistic-display-list-item__count
+									span 100 
+									| чел.
+						li.statistic-display-list-item
+							span.statistic-display-list-item__bar
+								span
+								span(style="width: 25%; background: #FF6F41")
+							span.statistic-display-list-item__info
+								span.statistic-display-list-item__mark(style="background: #FF6F41")
+								span.statistic-display-list-item__title
+									| Выход на работу
+								span.statistic-display-list-item__count
+									span 20 
+									| чел.
+			.col-lg-5.col-md-12
+				.nearest-interviews
+					.nearest-interviews__heading
+						.nearest-interviews__icon
+							img(src="image/nearest-interviews-heading-icon.svg" alt="#")
+						.nearest-interviews__info
+							h3.nearest-interviews__title
+								| Ближайшие собеседования
+							a.nearest-interviews__show-more(href="/vacancy-schedule.html")
+								| Смотреть все собеседования
+								<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+					.row
+						.col-xl-8.col-lg-7
+							.dflt-schedule
+								.dflt-schedule__heading
+									span Сегодня
+								.dflt-schedule__content
+									.dflt-schedule__column
+										.dflt-schedule__row
+											span 15:00
+											span 3 чел.
+										.dflt-schedule__row
+											span 17:00
+											span 5 чел.
+										.dflt-schedule__row
+											span 18:00
+											span 3 чел.
+									.dflt-schedule__separator
+									.dflt-schedule__column
+										.dflt-schedule__row
+											span 19:00
+											span 0 чел.
+										.dflt-schedule__row
+											span 20:00
+											span 5 чел.
+										.dflt-schedule__row
+											span 16:00
+											span 3 чел.
+						.col-xl-4.col-lg-5.d-none.d-lg-block
+							.dflt-schedule.dflt-schedule_ghost
+								.dflt-schedule__heading
+									span Завтра
+								.dflt-schedule__content
+									.dflt-schedule__column
+										.dflt-schedule__row
+											span 15:00
+											span 3 чел.
+										.dflt-schedule__row
+											span 17:00
+											span 5 чел.
+										.dflt-schedule__row
+											span 18:00
+											span 3 чел.

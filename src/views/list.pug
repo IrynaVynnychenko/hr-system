@@ -1,0 +1,64 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title Регистрация - Личный кабинет HR
+
+		link(rel="icon" type="image/png" href="image/favicon-48x48.png" sizes="48x48")
+		link(rel="icon" type="image/png" href="image/favicon-32x32.png" sizes="32x32")
+		link(rel="icon" type="image/png" href="image/favicon-16x16.png" sizes="16x16")
+		link(rel="shortcut icon" href="image/favicon.ico" type="image/x-icon")
+
+		include layouts/styles.pug
+	body
+
+		.intro
+			.intro__navline
+				.container
+					.row
+						.col-lg-12
+							a.main-logo(href="javascript:void(0);")
+								img(src="image/main-logo-black.svg" alt="#")
+			.intro__content
+				ul(style="width: 400px; margin: 0 auto; padding-left: 20px; text-align: center;")
+					li
+						a(href="index.html") Главная
+					li
+						a(href="vacancy-resume.html") Вакансии / Резюме
+					li
+						a(href="vacancy-info.html") Вакансии / О вакансии
+					li
+						a(href="vacancy-schedule.html") Вакансии / График собеседований
+					li
+						a(href="companies.html") Компании
+					li
+						a(href="login.html") Вход
+					li
+						a(href="registration.html") Регистрация
+					li
+						a(href="registration-code.html") Регистрация / Код
+					li
+						a(href="password-reset.html") Восстановление пароля
+					li
+						a(href="password-code.html") Восстановление пароля / Код
+					li
+						a(href="password-new.html") Восстановление пароля / Новый
+					li
+						a(href="company-item.html") Страница компании / Frame добавление нового сотрудника
+					li
+						a(href="add-company.html") Добавить компанию
+					li
+						a(href="fix-company.html") Редактировать компанию
+					li
+						a(href="no-vacancy.html") О вакансии / Нет вакансии
+					li
+						a(href="active&archive.html") Активные и архивные вакансии
+					li
+						a(href="worksheet.html") Анкета кандидата
+					li
+						a(href="worksheet.html") Вакансии / Действия
+
+
+		include layouts/scripts.pug

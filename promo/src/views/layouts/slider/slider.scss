@@ -1,0 +1,124 @@
+.slider {
+  background-color: #f2f2f2;
+  padding-top: 53px;
+  position: relative;
+  z-index: 1;
+  &:before {
+    background: linear-gradient(
+      180deg,
+      rgba(196, 196, 196, 0) 0%,
+      rgba(169, 171, 195, 0.15) 100%
+    );
+    position: absolute;
+    content: "";
+    height: 156px;
+    width: 100%;
+    z-index: 2;
+    bottom: 0px;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 5px;
+  }
+  &-desc {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4f4f4f;
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 0px;
+  }
+  &-img {
+    display: flex;
+    justify-content: center;
+  }
+  .slick-dots {
+    transform: rotate(90deg);
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+    bottom: 50%;
+    right: -50px;
+    li {
+      width: 10px;
+      height: 10px;
+      background: #ffffff;
+      box-shadow: 0px 2px 5px rgba(2, 0, 107, 0.1);
+      border-radius: 50%;
+      button {
+        padding: 0px;
+        &:before {
+          display: none;
+          padding: 0px;
+        }
+      }
+      &.slick-active {
+        background: #828282;
+        button {
+          padding: 0px;
+          &:before {
+            display: none;
+            padding: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .slick-slide img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider .slick-dots {
+    transform: rotate(0deg);
+    bottom: 74%;
+    right: calc(50% - 60px);
+  }
+  .slider {
+    .slider-desc {
+      margin-bottom: 52px;
+      max-width: 288px;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .slider-img {
+      img {
+        width: 100%;
+      }
+    }
+    .slick-slide > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+    .slider-img img {
+      width: auto;
+      height: 150px;
+    }
+    .slick-dots {
+      bottom: 60%;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .slider .slider-desc {
+    min-height: 70px;
+  }
+}

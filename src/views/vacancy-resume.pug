@@ -1,0 +1,30 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title Вакансии / Резюме - Личный кабинет HR
+
+		include layouts/seo.pug
+	body
+
+		include layouts/header/header.pug
+
+		main.main
+			.info-system-bar#sticky
+				include layouts/info-system-bar/info-system-bar.pug
+
+			.content-system-section
+				include layouts/vacancy-resume-top/vacancy-resume-top.pug
+
+				include layouts/vacancy-resume-table/vacancy-resume-table.pug
+
+
+		include layouts/fixed-nav/fixed-nav.pug
+
+		include layouts/calendar/calendar.pug
+
+		include layouts/addresume/addresume.pug
+
+		include layouts/scripts.pug

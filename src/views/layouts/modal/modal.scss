@@ -1,0 +1,58 @@
+@media (max-width: 991px) {
+  .add-form {
+    .new-account {
+      &__row-select {
+        max-width: 330px;
+      }
+      &__dropdown {
+        max-width: 100%;
+      }
+      &__row-item {
+        max-width: 330px;
+      }
+    }
+    &__row .all-companies-list-item {
+      max-width: 330px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .add-form {
+    .new-account__row {
+      &-item {
+        margin-bottom: 24px;
+        max-width: 100%;
+      }
+      &-select {
+        margin-bottom: 24px;
+        max-width: 100%;
+      }
+    }
+    .new-account__dropdown {
+      height: 49px;
+      .js-Dropdown {
+        min-height: 49px;
+        width: 100%;
+      }
+    }
+    &__row .all-companies-list-item {
+      max-width: 245px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .add-form__row .all-companies-list-item {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .add-form__row .all-companies-list-item {
+    min-height: 92px;
+    &__bg img {
+      max-width: 86px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+#exampleModal.modal.fade.new-account(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true') 
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.03127 19.0943L19.094 7.03154M19.0939 19.0942L7.03111 7.03139" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+      .modal-body
+        .new-account__title Добавление нового пользователя
+        form.new-account__form(action="#")
+          .new-account__row
+            .new-account__row-item
+              label.new-account__label(for="name") Имя
+              input.new-account__input(type="text" id="name" placeholder="Александр")
+            .new-account__row-item
+              label.new-account__label(for="second-name") Фамилия
+              input.new-account__input(type="text" id="second-name" placeholder="Филиппов")
+          .new-account__row
+            .new-account__row-item
+              label.new-account__label(for="email") E-mail
+              input.new-account__input(type="email" id="mail" placeholder="info@mebot24-hr.ru")
+            .new-account__row-item
+              label.new-account__label(for="position") Должность
+              input.new-account__input(type="text" id="position" placeholder="HR-директор")
+          .new-account__row.several
+            .new-account__row-select
+              label.new-account__label(for="positions") Вакансии
+              .new-account__dropdown
+                select.header-dropdown__list(name='positions')
+                  option(value='Просмотр') Просмотр
+                  option(value='Просмотр') Просмотр
+                  option(value='Просмотр') Просмотр
+                  option(value='Просмотр') Просмотр
+            .new-account__row-select
+              label.new-account__label(for="conversations") Собеседования
+              .new-account__dropdown
+                select.header-dropdown__list(name='conversations')
+                  option(value='Просмотр') Редактирование
+                  option(value='Просмотр') Редактирование
+                  option(value='Просмотр') Редактирование
+                  option(value='Просмотр') Редактирование
+            .new-account__row-select
+              label.new-account__label(for="tests") Анкеты
+              .new-account__dropdown
+                select.header-dropdown__list(name='tests')
+                  option(value='Просмотр') Просмотр
+                  option(value='Просмотр') Просмотр
+                  option(value='Просмотр') Просмотр
+                  option(value='Просмотр') Просмотр
+          button(type="submit").new-account__row-btn Сохранить

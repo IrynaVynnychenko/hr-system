@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title Вакансии / О вакансии - Личный кабинет HR
+
+		include layouts/seo.pug
+	body
+
+		include layouts/header/header.pug
+
+		main.main
+			.info-system-bar#sticky
+				include layouts/info-system-bar/info-system-bar.pug
+
+			include layouts/vacancy-info-form/vacancy-info-form.pug
+
+		include layouts/fixed-nav/fixed-nav.pug
+
+		include layouts/calendar/calendar.pug
+
+		include layouts/scripts.pug

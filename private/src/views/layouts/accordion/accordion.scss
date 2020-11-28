@@ -1,0 +1,92 @@
+.accordion-private {
+  background: #f2f2f2;
+  padding-bottom: 80px;
+  .accordion {
+    max-width: 744px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 53px;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .card {
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    border-radius: 17px;
+    background-color: #fff;
+    border: 0px;
+    padding: 12px 18px 12px 22px;
+    min-height: 58px;
+    &-body {
+      border-radius: 0px 0px 17px 17px;
+    }
+    &-header {
+      box-shadow: none;
+      padding: 0px;
+      background-color: #fff;
+      border: 0px;
+      border-color: 0px;
+      .btn {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 28px;
+        font-feature-settings: "pnum" on, "lnum" on;
+        color: #333333;
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        justify-content: space-between;
+      }
+    }
+  }
+  .accordion > .card > .card-header {
+    border-radius: 17px;
+  }
+  .accordion > .card:not(:first-of-type) {
+    border-radius: 17px;
+  }
+  .accordion > .card:not(:last-of-type) {
+    border-radius: 17px;
+  }
+  .collapse-show {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #4f4f4f;
+    cursor: default;
+    max-width: 658px;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 15px;
+  }
+  .btn[aria-expanded="true"] {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.btn-text {
+  text-align: left;
+}
+
+@media (max-width: 991px) {
+  .accordion-private__title {
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 14px;
+  }
+  .accordion-private {
+    padding-bottom: 32px;
+  }
+}

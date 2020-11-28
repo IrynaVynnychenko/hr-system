@@ -1,0 +1,63 @@
+section
+    .container
+        .row
+            .col-lg-12
+                .accordion#accordionPersons
+                    .card
+                        .card-header#headingOne
+                            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne") 
+                                .accordion-col
+                                    .accordion-person
+                                        .accordion-person__pict ИИ
+                                        .accordion-person__name Иванов Иван Петрович
+                                .accordion-col
+                                    .accordion-top
+                                        .accordion-status
+                                            .accordion-status__name Статус:
+                                            .accordion-status__desc.accordion-status__green принят
+                                        .accordion-tests
+                                            .accordion-status__name Пройденные тесты:
+                                            .accordion-tests__desc.accordion-status__green
+                                                <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="4.31372" cy="4.01275" r="3.92602" fill="white"/>
+                                                    <path d="M3.00488 4.11387L4.05948 5.32142L5.62223 2.70407" stroke="#27AE60" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                | Проверено
+                                        .arrow-btn
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="13" cy="13" r="12.48" transform="rotate(-90 13 13)" stroke="#BDBDBD" stroke-width="1.04"/>
+                                            <path d="M9 14C9.32 13.68 11.8 11.2 13 10L17 14" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+
+                        #collapseOne.collapse.show(aria-labelledby="headingOne" data-parent="#accordionPersons")
+                            .card-body 
+                                include ../statistic-part/statistic-part.pug
+                    .card
+                        .card-header#headingTwo
+                            button.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                                .accordion-col
+                                    .accordion-person
+                                        .accordion-person__pict ИИ
+                                        .accordion-person__name Иванов Иван Петрович
+                                .accordion-col
+                                    .accordion-top
+                                        .accordion-status
+                                            .accordion-status__name Статус:
+                                            .accordion-status__desc.accordion-status__red отклонено
+                                        .accordion-tests
+                                            .accordion-status__name Пройденные тесты:
+                                            .accordion-tests__desc.accordion-status__red
+                                                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="4.5" cy="4.5" r="4.5" fill="white"/>
+                                                <path d="M3.93707 1.77771L4.02632 5.37717H4.96336L5.05261 1.77771H3.93707ZM4.49484 7.23639C4.83322 7.23639 5.10095 6.97982 5.10095 6.6526C5.10095 6.32537 4.83322 6.0688 4.49484 6.0688C4.15646 6.0688 3.88873 6.32537 3.88873 6.6526C3.88873 6.97982 4.15646 7.23639 4.49484 7.23639Z" fill="#FF6363"/>
+                                                </svg>
+                                                | Нет проверки
+                                        .arrow-btn
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="13" cy="13" r="12.48" transform="rotate(-90 13 13)" stroke="#BDBDBD" stroke-width="1.04"/>
+                                            <path d="M9 14C9.32 13.68 11.8 11.2 13 10L17 14" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                        #collapseTwo.collapse(aria-labelledby="headingTwo" data-parent="#accordionPersons")
+                            .card-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.

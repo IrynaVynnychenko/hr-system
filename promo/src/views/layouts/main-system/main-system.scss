@@ -1,0 +1,53 @@
+.management-system {
+  background: #3c3e55;
+  .promo-main__desc {
+    margin-bottom: 30px;
+    max-width: 298px;
+    width: 100%;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  &.promo-main .dflt-bttn {
+    max-width: 298px;
+    width: 100%;
+    margin-bottom: 56px;
+  }
+  .promo-main__title {
+    padding-top: 52px;
+  }
+}
+
+.promo-main__form {
+  .dflt-input_phone {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 21px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    max-width: 298px;
+    width: 100%;
+    margin-bottom: 24px;
+    &::placeholder {
+      color: #bdbdbd;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .management-system .promo-main__title {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-main__form .dflt-input_phone {
+    height: 42px;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,36 @@
+aside.aside
+    .vacancy-display.main__vacancy-display
+        .vacancy-display__heading
+            h3.vacancy-display__title(data-count="5")
+                span Мои вакансии
+            a.notify-toggle.active(href="javascript:void(0);")
+                .notify-toggle__icon
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.32253 0.944297L2.49189 0.118037C1.06795 1.18037 0.118662 2.83289 0 4.72148H1.18662C1.30528 3.12798 2.07658 1.77056 3.32253 0.944297ZM11.2729 4.72148H12.4595C12.3408 2.83289 11.4508 1.18037 10.0269 0.118037L9.19628 0.944297C10.3829 1.77056 11.1542 3.12798 11.2729 4.72148ZM10.0862 5.01658C10.0862 3.187 8.84029 1.71154 7.1197 1.29841V0.885278C7.1197 0.41313 6.70438 0 6.22974 0C5.75509 0 5.33977 0.41313 5.33977 0.885278V1.29841C3.61918 1.71154 2.37323 3.187 2.37323 5.01658V8.2626L1.18662 9.44297V10.0332H11.2729V9.44297L10.0862 8.2626V5.01658ZM6.22974 11.8037C6.28907 11.8037 6.40773 11.8037 6.46706 11.8037C6.88238 11.7447 7.17903 11.4496 7.29769 11.0955C7.35702 10.9774 7.41635 10.8004 7.41635 10.6233H5.04312C5.04312 11.2725 5.5771 11.8037 6.22974 11.8037Z" fill="#4F4F4F"/>
+                    </svg>
+                    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.08627 5.01658C9.08627 3.187 7.84032 1.71154 6.11973 1.29841V0.885278C6.11973 0.41313 5.70441 0 5.22977 0C4.75512 0 4.3398 0.41313 4.3398 0.885278V1.29841C2.61921 1.71154 1.37326 3.187 1.37326 5.01658V8.2626L0.186646 9.44297V10.0332H10.2729V9.44297L9.08627 8.2626V5.01658ZM5.22977 11.8037C5.2891 11.8037 5.40776 11.8037 5.46709 11.8037C5.8824 11.7447 6.17906 11.4496 6.29772 11.0955C6.35705 10.9774 6.41638 10.8004 6.41638 10.6233H4.04315C4.04315 11.2725 4.57713 11.8037 5.22977 11.8037Z" fill="#BDBDBD"/>
+                    </svg>
+                .notify-toggle__text
+                    span
+                        | вкл
+                    span
+                        | выкл
+        ul.vacancy-display__list#example-1
+            li.vacancy-display-list-item(v-for="item in items.slice(0, 5)")
+                span.vacancy-display-list-item__letter {{ item.letter }}
+                span.vacancy-display-list-item__info
+                    span.vacancy-display-list-item__title
+                        | {{ item.name }} 
+                    span.vacancy-display-list-item__links
+                        a(href="javascript:void(0);") {{ item.candidates }}
+                            span кандидата
+                        a(href="javascript:void(0);") {{ item.resumes }} 
+                            span анкет
+
+        a.vacancy-display__show-all(href="javascript:void(0);")
+            span ещё 
+            span.show-number 2
+            //- span.show-number {{ doMath() }}
+            | вакансии
+        a.dflt-bttn(href="/active&archive.html") Смотреть остальные вакансии

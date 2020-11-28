@@ -1,0 +1,473 @@
+.schedule-time-wrapper {
+  display: flex;
+  padding: 20px 40px 35px 25px;
+  border-radius: 11px;
+  background: #ffffff;
+  &__remove {
+    margin-top: auto;
+    text-decoration: underline;
+    span {
+      font-size: 12px;
+      line-height: 18px;
+      color: #828282;
+      max-width: 106px;
+      width: 100%;
+      display: flex;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 20%;
+    padding: 10px 0;
+    justify-content: space-between;
+    &-bottom {
+      .interview-list__name {
+        border: 1px solid #cdcede;
+        border-radius: 3px;
+        max-width: 131px;
+        width: 100%;
+        padding: 6px 8px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #4f4f4f;
+        min-height: 33px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+    }
+  }
+  &__time {
+    display: block;
+    width: 100%;
+    height: 22px;
+    margin-bottom: 10px;
+    color: #4f4f4f;
+  }
+  &__status {
+    display: inline-block;
+    margin-bottom: auto;
+    padding: 2px 7px;
+    border: 1px solid #ff6363;
+    border-radius: 3px;
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #ff6363;
+    &_done {
+      border-color: #27ae60;
+      color: #27ae60;
+    }
+  }
+  &__list {
+    width: 80%;
+
+    &-add {
+      margin-top: 15px;
+      padding-left: 55px;
+
+      .dflt-bttn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.schedule-date-wrapper {
+  &__list {
+    .schedule-time-wrapper {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.schedule-list-item {
+  &_empty {
+    .schedule-list-item {
+      &__info {
+        span {
+          &:nth-child(1) {
+            width: 62%;
+          }
+
+          &:nth-child(2) {
+            width: 38%;
+          }
+        }
+      }
+    }
+  }
+  &__status-1 {
+    display: inline-block;
+    width: 100%;
+    padding: 3px 5px;
+    border: 1px solid #ff6363;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #4f4f4f;
+    transition: all 0.3s ease;
+    &_done {
+      cursor: pointer;
+    }
+
+    &_done,
+    &:hover {
+      background: #ff6363;
+      color: #ffffff;
+    }
+  }
+
+  &__status-2 {
+    display: inline-block;
+    width: 100%;
+    padding: 3px 5px;
+    border: 1px solid #27ae60;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #4f4f4f;
+    transition: all 0.3s ease;
+    &_done {
+      cursor: pointer;
+    }
+
+    &_done,
+    &:hover {
+      background: #27ae60;
+      color: #ffffff;
+    }
+  }
+  &__number {
+    flex-shrink: 0;
+    width: 55px;
+    color: #4f4f4f;
+  }
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 55px);
+
+    > span {
+      display: block;
+
+      &:nth-child(1) {
+        width: 40%;
+        color: #4f4f4f;
+      }
+
+      &:nth-child(2) {
+        width: 22%;
+        text-align: center;
+      }
+
+      &:nth-child(3) {
+        width: 19%;
+        padding: 0 5px;
+      }
+
+      &:nth-child(4) {
+        width: 19%;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: #4f4f4f;
+  }
+
+  &__bttn {
+    display: inline-block;
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #cdcede;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #828282;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: #828282;
+      border-color: #cdcede;
+      color: #fff;
+    }
+  }
+}
+
+.schedule-report {
+  .schedule-list-item__info > span:nth-child(2) {
+    width: 35%;
+    text-align: left;
+    margin-left: 40px;
+  }
+  .dflt-bttn {
+    max-width: 184px;
+    width: 100%;
+    height: 30px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .schedule-list-item__bttn {
+    height: 28px;
+    max-width: 57px;
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .schedule-list-item_empty .schedule-list-item__info span {
+    &:nth-child(1) {
+      width: 50%;
+    }
+    &:nth-child(2) {
+      width: 50%;
+    }
+  }
+  .schedule-report .schedule-list-item__info > span:nth-child(2) {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .schedule-report .schedule-list-item__info > span:nth-child(2) {
+    margin-left: 14px;
+  }
+  .schedule-list-item {
+    &__status-1 {
+      font-size: 11px;
+    }
+    &__status-2 {
+      font-size: 11px;
+    }
+  }
+  .schedule-list-item_empty .schedule-list-item__info {
+    span:nth-child(1) {
+      width: 44%;
+    }
+    span:nth-child(2) {
+      width: 56%;
+    }
+  }
+  .schedule-time-wrapper {
+    padding: 22px 18px 32px 18px;
+    flex-direction: column;
+    &__info {
+      padding: 0px;
+      width: 100%;
+      &-top {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      &-bottom {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 100%;
+        .schedule-time-wrapper__remove {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          svg {
+            margin-right: 6px;
+          }
+          span {
+            max-width: 200px;
+          }
+        }
+        .interview-list__title {
+          margin-right: 10px;
+        }
+        .interview-list__name {
+          margin-top: 0px;
+        }
+      }
+    }
+    &__time {
+      margin-right: 19px;
+    }
+    .schedule-time-wrapper__list {
+      width: 100%;
+    }
+    &__list-add {
+      padding-left: 0px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .schedule-time-wrapper__list-add {
+    margin-top: 0px;
+  }
+  .schedule-list-item_empty {
+    .schedule-list-item__info span {
+      &:nth-child(1) {
+        width: 100%;
+      }
+      &:nth-child(2) {
+        width: 100%;
+      }
+    }
+  }
+  .schedule-list-item {
+    &__number {
+      height: 100%;
+    }
+  }
+  .schedule-list-item__info {
+    flex-wrap: wrap;
+    & > span {
+      &:nth-child(1) {
+        width: 60%;
+        margin-bottom: 11px;
+      }
+      &:nth-child(2) {
+        width: 40%;
+        text-align: right;
+        margin-bottom: 11px;
+      }
+      &:nth-child(3) {
+        width: 50%;
+      }
+      &:nth-child(4) {
+        width: 50%;
+      }
+    }
+  }
+  .schedule-list-item__status-1 {
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .schedule-list-item__status-2 {
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .schedule-report .schedule-list-item__info > span:nth-child(2) {
+    text-align: right;
+  }
+  .schedule-date-wrapper__list {
+    .schedule-list-item {
+      align-items: normal;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .schedule-list-item {
+    &__info {
+      width: calc(100% - 40px);
+      align-items: normal;
+    }
+    &__number {
+      width: 40px;
+    }
+    &__bttn {
+      font-size: 12px;
+      height: 30px;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .schedule-report {
+    .dflt-bttn {
+      font-size: 11px;
+    }
+    .schedule-list-item__bttn {
+      font-size: 11px;
+      height: 30px;
+    }
+  }
+  .schedule-time-wrapper__info-bottom .interview-list {
+    &__title {
+      margin-right: 12px;
+      font-size: 12px;
+    }
+    .dflt-select {
+      min-width: 180px;
+    }
+    &__name {
+      font-size: 12px;
+    }
+  }
+  .schedule-time-wrapper {
+    &__list {
+      font-size: 12px;
+      &-add .dflt-bttn {
+        margin-top: 5px;
+        font-size: 13px;
+      }
+    }
+    &__info-bottom {
+      .interview-list__name {
+        padding: 4px 8px;
+        justify-content: center;
+      }
+      .schedule-time-wrapper__remove {
+        span {
+          justify-content: center;
+        }
+        svg {
+          margin-right: 0px;
+        }
+      }
+    }
+    &__list.schedule-report {
+      .schedule-list-item__info > span {
+        &:nth-child(1) {
+          width: 100%;
+        }
+        &:nth-child(2) {
+          text-align: left;
+          margin-left: 0px;
+          width: 50%;
+        }
+      }
+    }
+  }
+  .schedule-list-item {
+    &_empty .schedule-list-item__info span:nth-child(2) {
+      margin-bottom: 0px;
+    }
+  }
+}

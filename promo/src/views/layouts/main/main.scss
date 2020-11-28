@@ -1,0 +1,107 @@
+.mockup {
+  background: #474e56;
+  padding-top: 32px;
+  padding-bottom: 36px;
+  &-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    &__title {
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 44px;
+      color: #ffffff;
+      margin-bottom: 22px;
+    }
+    &__desc {
+      font-size: 17px;
+      line-height: 28px;
+      color: #ffffff;
+      margin-bottom: 36px;
+      font-weight: normal;
+    }
+    &__btn {
+      .dflt-bttn {
+        max-width: 360px;
+      }
+    }
+  }
+  &-img {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .mockup {
+    padding-top: 90px;
+    min-height: 522px;
+    overflow: hidden;
+    &-img {
+      display: none;
+    }
+    .col-lg-5 {
+      height: 100%;
+    }
+    &-block {
+      position: relative;
+      max-width: 400px;
+      &:after {
+        position: absolute;
+        content: "";
+        bottom: -146px;
+        right: -340px;
+        background-image: url(../image/iphone-mockups.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 340px;
+        height: 340px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mockup-block {
+    margin-left: auto;
+    margin-right: auto;
+    &__title {
+      font-size: 20px;
+      line-height: 29px;
+      margin-bottom: 24px;
+    }
+    &__desc {
+      font-size: 13px;
+      line-height: 21px;
+    }
+    &:after {
+      width: 202px;
+      height: 202px;
+      bottom: -105%;
+      right: calc(50% - 90px);
+    }
+  }
+  .mockup {
+    min-height: 560px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mockup-block__btn .dflt-bttn {
+    height: 42px;
+  }
+  .mockup-block:after {
+    bottom: -113%;
+  }
+}
+
+@media (max-width: 360px) {
+  .mockup-block__btn {
+    margin-top: 204px;
+  }
+  .mockup-block:after {
+    bottom: 15%;
+    right: 0px;
+  }
+}

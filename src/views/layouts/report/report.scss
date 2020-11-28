@@ -1,0 +1,267 @@
+.addReport {
+  &-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .close {
+    position: absolute;
+    content: "";
+    top: 28px;
+    right: 21px;
+    z-index: 2;
+  }
+  .modal-body {
+    padding: 50px 64px 72px 64px;
+    z-index: 1;
+  }
+  .modal-dialog {
+    margin-top: 94px;
+    max-width: 686px;
+  }
+  .calendar__title {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 469px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-bottom: 28px;
+  }
+  &-item {
+    display: flex;
+    box-shadow: 0px 1px 10px rgba(2, 1, 72, 0.16);
+    border-radius: 15px;
+    padding: 12px 30px;
+    align-items: center;
+    max-width: 312px;
+    width: 100%;
+    height: 69px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 21px;
+    cursor: default;
+
+    &__pict {
+      background: rgba(254, 220, 45, 0.6);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 21px;
+      color: #000000;
+      margin-right: 16px;
+    }
+    &__name {
+      font-size: 17px;
+      line-height: 29px;
+      color: #333333;
+    }
+  }
+  &-desc {
+    font-size: 14px;
+    line-height: 21px;
+    color: #4f4f4f;
+    text-align: center;
+    margin-bottom: 16px;
+    &__link {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    margin-top: 20px;
+    color: #333333;
+    margin-bottom: 18px;
+  }
+  .new-account__row-btn {
+    max-width: 360px;
+    width: 100%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 34px;
+  }
+  &-btns {
+    display: flex;
+    justify-content: flex-start;
+    .schedule-list-item__status-2 {
+      max-width: 84px;
+      margin-right: 12px;
+      margin-bottom: 16px;
+    }
+    .schedule-list-item__status-1 {
+      max-width: 84px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.rating {
+  margin-bottom: 16px;
+  &-title {
+    font-size: 13px;
+    line-height: 20px;
+    color: #4f4f4f;
+    margin-right: 6px;
+    span {
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 15px;
+    }
+  }
+  &-row {
+    display: flex;
+    cursor: pointer;
+  }
+  &-bg {
+    background: #cdcede;
+    border-radius: 10px;
+    width: calc(100% / 10 - 3px);
+    height: 6px;
+    margin-right: 3px;
+    position: relative;
+    z-index: 1;
+    &__item {
+      position: absolute;
+      z-index: 2;
+      content: "";
+      background: #fedc2d;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.test-item {
+  box-shadow: 0px 2px 5px rgba(2, 0, 107, 0.1);
+  border-radius: 11px;
+  width: 147px;
+  text-align: center;
+  margin-right: 16px;
+  min-height: 113px;
+  background-color: #fff;
+  cursor: pointer;
+  &__top {
+    min-height: 34px;
+    background: #27ae60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px 11px 0px 0px;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 20px;
+    color: #ffffff;
+    padding: 8px 8px;
+    width: 147px;
+  }
+  svg {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+  }
+  &__bottom {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    width: 147px;
+    &-text {
+      margin-bottom: 4px;
+      color: #000000;
+      font-size: 13px;
+      line-height: 20px;
+      span {
+        font-size: 25px;
+        line-height: 29px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.test-row {
+  padding-left: 5px;
+  margin-left: -5px;
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  margin-right: -5px;
+}
+
+.castom-textarea {
+  border: 1px solid #cdcede;
+  max-width: 100%;
+  min-height: 88px;
+  border-radius: 5px;
+  resize: none;
+  padding: 12px 18px;
+  &::placeholder {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    color: #bdbdbd;
+  }
+}
+
+@media (max-width: 576px) {
+  .addReport {
+    .modal-body {
+      padding: 31px 16px 48px 16px;
+    }
+    .close {
+      top: 16px;
+      right: 17px;
+    }
+    .calendar__title {
+      font-size: 17px;
+      line-height: 22px;
+      margin-bottom: 24px;
+    }
+    &-item {
+      padding: 8px 18px;
+      min-height: 46px;
+      max-width: 260px;
+      justify-content: center;
+      &__pict {
+        margin-right: 10px;
+        width: 31px;
+        height: 31px;
+        font-size: 11px;
+        line-height: 15px;
+      }
+      &__name {
+        font-size: 15px;
+        line-height: 29px;
+      }
+    }
+    &-title {
+      margin-bottom: 16px;
+    }
+    .calendar__title {
+      max-width: 244px;
+    }
+    .new-account__row-btn {
+      margin-top: 26px;
+    }
+  }
+  .custom-textarea {
+    &::placeholder {
+      font-size: 13px;
+    }
+  }
+}

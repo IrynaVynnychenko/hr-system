@@ -1,0 +1,122 @@
+.content-system-section__content.noVacancy-page
+    .container
+        .row
+            .col-lg-12
+                form.vacancy-info-form(action="#")
+                    .row
+                        .col-lg-6
+                            h2.content-system-section__title.novacancy__title#create-vacancy
+                                | Создание вакансии                                              
+                            .vacancy-info-form__row
+                                .input-title
+                                    span Название вакансии
+                                input.dflt-input(type="text" name="vacancyInfo1" placeholder="Название вакансии" value="Руководитель рекламного отдела")
+                            .vacancy-info-form__row
+                                .input-title
+                                    span Компания
+                                .row
+                                    .col-xl-12.col-sm-12.col-12
+                                        .form-select
+                                            select.form-select__source(name="company")
+                                                option(value="ООО 'Рога и Копыта'" selected) ООО "Рога и Копыта" 
+                                                option(value="ООО 'Рога и Копыта'") ООО "Рога и Копыта" 
+                                                option(value="ООО 'Рога и Копыта'") ООО "Рога и Копыта" 
+                            .vacancy-info-form__row
+                                .input-title
+                                    span Заработная плата
+                                .row
+                                    .col-xl-5.col-sm-4.col-4.small-col
+                                        input.dflt-input.dflt-input_numeric(type="text" name="vacancyInfo2" placeholder="от")
+                                    .col-xl-5.col-sm-4.col-4.small-col
+                                        input.dflt-input.dflt-input_numeric(type="text" name="vacancyInfo3" placeholder="до")
+                                    .col-xl-2.col-sm-4.col-4.small-col
+                                        .form-select
+                                            select.form-select__source(name="vacancyInfo4")
+                                                option(value="rub" selected) руб
+                                                option(value="eur") eur
+                                                option(value="usd") usd											 
+
+                            .vacancy-info-form__row
+                                .input-title
+                                    span Ссылка на источник размещения
+                                textarea.dflt-textarea.link-textarea(name="vacancyInfo5" height="92px" placeholder="Ссылка на источник размещения")
+                                    | https://www.figma.com/file/O6GcB053NJ7YaxgPTp2FOU/%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D0%B5%D1%82-HR?node-id=48%3A21
+                                .vacancy-info-form__source-select
+                                    .vacancy-info-form__source-select-item
+                                        input(type="radio" id="linkHH" name="vacancyInfo6" checked)
+                                        label(for="linkHH") hh
+                                    .vacancy-info-form__source-select-item
+                                        input(type="radio" id="linkSuperjob" name="vacancyInfo6")
+                                        label(for="linkSuperjob") superjob
+                                    .vacancy-info-form__source-select-item
+                                        input(type="radio" id="linkRabota" name="vacancyInfo6")
+                                        label(for="linkRabota") rabota
+                                    .vacancy-info-form__source-select-item
+                                        input(type="radio" id="linkOther" name="vacancyInfo6")
+                                        label(for="linkOther") Другое
+                            .vacancy-info-form__row.special
+                                .input-title
+                                    span График
+                                .row
+                                    .col-lg-6.col-md-12
+                                        .dflt-radio
+                                            input(type="radio" id="schedule1" name="vacancyInfo8")
+                                            label(for="schedule1")
+                                                span Полный рабочий день
+                                        .dflt-radio
+                                            input(type="radio" id="schedule2" name="vacancyInfo8")
+                                            label(for="schedule2")
+                                                span Свободный график
+                                    .col-lg-6.col-md-12
+                                        .dflt-radio
+                                            input(type="radio" id="schedule3" name="vacancyInfo8" checked)
+                                            label(for="schedule3")
+                                                span Половина рабочего дня
+                                        .dflt-radio
+                                            input(type="radio" id="schedule4" name="vacancyInfo8")
+                                            label(for="schedule4")
+                                                span Сменный график
+                            .vacancy-info-form__row.special
+                                .input-title
+                                    span Тип вакансии
+                                .row
+                                    .col-lg-6
+                                        .dflt-radio
+                                            input(type="radio" id="vacancytype1" name="vacancyInfo9")
+                                            label(for="vacancytype1")
+                                                span Работа в офисе
+                                    .col-lg-6
+                                        .dflt-radio
+                                            input(type="radio" id="vacancytype2" name="vacancyInfo9" checked)
+                                            label(for="vacancytype2")
+                                                span Удаленная
+                            .vacancy-info-form__row.special
+                                .input-title
+                                    span Тип найма
+                                .row
+                                    .col-lg-6
+                                        .dflt-radio
+                                            input(type="radio" id="worktype1" name="vacancyInfo10")
+                                            label(for="worktype1")
+                                                span Регулярный поиск
+                                    .col-lg-6
+                                        .dflt-radio
+                                            input(type="radio" id="worktype2" name="vacancyInfo10" checked)
+                                            label(for="worktype2")
+                                                span Единоразовый
+
+                        .col-lg-6
+                            .vacancy-info-form__row
+                                .input-title
+                                    span Требования
+                                textarea.dflt-textarea.dflt-textarea__mobile(name="vacancyInfo7" style="height: 252px" placeholder="Правила организации вашего коллектива, необходимые знания...")
+                            .vacancy-info-form__row
+                                .input-title
+                                    span Условия работы
+                                textarea.dflt-textarea.dflt-textarea__mobile(name="vacancyInfo11" style="height: 252px" placeholder="Опишите режим работы, местонахождение компании...")
+                            .vacancy-info-form__row
+                                .input-title
+                                    span Перечислите обязанности
+                                textarea.dflt-textarea.dflt-textarea__mobile(name="vacancyInfo12" style="height: 252px" placeholder="Какими навыками и знаниями должен обладать кандидат...")
+                        .col-lg-12
+                            button.dflt-bttn(type="submit") Сохранить
