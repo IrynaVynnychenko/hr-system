@@ -16,7 +16,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-xl-2 col-lg-2 col-md-6 col-9 d-flex align-items-center d-lg-block">
-              <button class="main-menu-show d-lg-none hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="main-logo" href="javascript:void(0);"><img src="image/main-logo.svg" alt="#"></a>
+              <button class="main-menu-show d-lg-none hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="main-logo" href="index.html"><img src="image/main-logo.svg" alt="#"></a>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-5 d-none d-lg-block">
               <div class="help-contact"><span>У вас есть вопросы?</span><span class="help-contact__dash"></span><a href="mailto:info@mebot24-hr.ua">info@mebot24-hr.ua</a></div>
@@ -27,7 +27,7 @@
               </div>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-6 col-3">
-              <div class="profile-display"><a class="profile-display__bttn" href="javascript:void(0);" data-letters="ИН"><span>Иванов Н.П.</span></a>
+              <div class="profile-display"><a class="profile-display__bttn" href="fix-company.html" data-letters="ИН"><span>Иванов Н.П.</span></a>
                 <div class="profile-block">
                   <div class="profile-block__title">Иванов Н.П.</div>
                   <div class="profile-block__btns"><a class="btn-correct profile__btn-transparent" href="/profile/">Редактировать профиль</a><a class="btn-out profile__btn-transparent" href="/?logout=yes">Выйти</a></div>
@@ -43,14 +43,15 @@
             <div class="col-lg-8">
               <nav class="main-nav">
                 <ul class="main-menu">
-                  <li class="main-menu__item"><a class="main-menu__link" href="/">Главная</a></li>
-                  <li class="main-menu__item main-menu__item-vacancies"><a class="main-menu__link" href="/vacancy/">Вакансии</a></li>
-                  <li class="main-menu__item"><a class="main-menu__link" href="/company/">Компании</a></li>
-                  <li class="main-menu__item"><a class="main-menu__link" href="/">О системе</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="index.html">Главная</a></li>
+                  <li class="main-menu__item main-menu__item-vacancies"><a class="main-menu__link" href="list.html">Вакансии</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="companies.html">Компании</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="all-pages.html">О системе</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="sitemap.html">Карта сайту</a></li>
                 </ul>
               </nav>
             </div>
-            <div class="col-lg-4"><a class="other-products" href="javascript:void(0);">
+            <div class="col-lg-4"><a class="other-products" href="promo1.html">
                 Другие продукты<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1C1.32 1.32 3.8 3.8 5 5L1 9" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a></div>
@@ -79,11 +80,12 @@
                   <div id="selectVue">
                     <vue-multiselect v-model="value" :options="options" :show-labels="false" :close-on-select="false" :searchable="false" data-color=""></vue-multiselect>
                   </div>
-                </div><a class="mobile-block__item" href="/"><span class="profile-icon"> <img src="./image/icon-1.svg" alt="#"></span>
-                  <div class="mobile-block__item-text">Главная</div></a><a class="mobile-block__item" href="/active&amp;archive.html"><span class="profile-icon"> <img src="./image/icon-2.svg" alt="#"></span>
-                  <div class="mobile-block__item-text">Вакансии</div><span class="mobile-number active">5</span></a><a class="mobile-block__item" href="/companies.html"><span class="profile-icon"> <img src="./image/icon-3.svg" alt="#"></span>
-                  <div class="mobile-block__item-text">Компании</div><span class="mobile-number">2</span></a><a class="mobile-block__item" href="javascript:void(0);"><span class="profile-icon"> <img src="./image/icon-4.svg" alt="#"></span>
-                  <div class="mobile-block__item-text">О системе</div></a><a class="mobile-block__item" href="/login.html"><span class="profile-icon"> <img src="./image/icon-5.svg" alt="#"></span>
+                </div><a class="mobile-block__item" href="index.html"><span class="profile-icon"> <img src="./image/icon-1.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Главная</div></a><a class="mobile-block__item" href="list.html"><span class="profile-icon"> <img src="./image/icon-2.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Вакансии</div><span class="mobile-number active">5</span></a><a class="mobile-block__item" href="companies.html"><span class="profile-icon"> <img src="./image/icon-3.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Компании</div><span class="mobile-number">2</span></a><a class="mobile-block__item" href="all-pages.html"><span class="profile-icon"> <img src="./image/icon-4.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">О системе</div></a><a class="mobile-block__item" href="sitemap.html"><span class="profile-icon"> <img src="./image/icon-4.svg" alt="#"></span>
+                  <div class="mobile-block__item-text">Карта сайту</div></a><a class="mobile-block__item" href="login.html"><span class="profile-icon"> <img src="./image/icon-5.svg" alt="#"></span>
                   <div class="mobile-block__item-text">Выход</div></a>
               </div>
               <div class="mobile-footer">
@@ -116,14 +118,14 @@
             </div>
           </div>
           <ul class="vacancy-display__list scroll-wrapper" id="fixedNavVacancy">
-            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">Р</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Руководитель отдела продаж </span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
-            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
-            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
-            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
-            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
-            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
-            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">102 кандидата</a><a href="javascript:void(0);">10 анкет</a></span></span></li>
-          </ul><a class="dflt-bttn" href="/no-vacancy.html">
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">Р</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Руководитель отдела продаж </span><span class="vacancy-display-list-item__links"><a href="vacancy-resume.html">102 кандидата</a><a href="worksheet.html">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="vacancy-resume.html">102 кандидата</a><a href="worksheet.html">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="vacancy-resume.html">102 кандидата</a><a href="worksheet.html">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="vacancy-resume.html">102 кандидата</a><a href="worksheet.html">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="vacancy-resume.html">102 кандидата</a><a href="worksheet.html">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Менеджер по продажам</span><span class="vacancy-display-list-item__links"><a href="vacancy-resume.html">102 кандидата</a><a href="worksheet.html">10 анкет</a></span></span></li>
+            <li class="vacancy-display-list-item vacancy-display-list-item_2"><span class="vacancy-display-list-item__letter">М</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">Маркетолог</span><span class="vacancy-display-list-item__links"><a href="vacancy-resume.html">102 кандидата</a><a href="worksheet.html">10 анкет</a></span></span></li>
+          </ul><a class="dflt-bttn" href="no-vacancy.html">
             <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <ellipse cx="7.60469" cy="7" rx="6.95674" ry="7" fill="black"/>
 <path d="M7.60428 5V9M9.59192 7L5.61664 7" stroke="#FEDC2D" stroke-width="2" stroke-linecap="round"/>
@@ -146,7 +148,7 @@
             <aside class="aside">
               <div class="vacancy-display main__vacancy-display">
                 <div class="vacancy-display__heading">
-                  <h3 class="vacancy-display__title" data-count="5"><span>Мои вакансии</span></h3><a class="notify-toggle active" href="javascript:void(0);">
+                  <h3 class="vacancy-display__title" data-count="5"><span>Мои вакансии</span></h3><a class="notify-toggle active" href="all-pages.html">
                     <div class="notify-toggle__icon"><svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.32253 0.944297L2.49189 0.118037C1.06795 1.18037 0.118662 2.83289 0 4.72148H1.18662C1.30528 3.12798 2.07658 1.77056 3.32253 0.944297ZM11.2729 4.72148H12.4595C12.3408 2.83289 11.4508 1.18037 10.0269 0.118037L9.19628 0.944297C10.3829 1.77056 11.1542 3.12798 11.2729 4.72148ZM10.0862 5.01658C10.0862 3.187 8.84029 1.71154 7.1197 1.29841V0.885278C7.1197 0.41313 6.70438 0 6.22974 0C5.75509 0 5.33977 0.41313 5.33977 0.885278V1.29841C3.61918 1.71154 2.37323 3.187 2.37323 5.01658V8.2626L1.18662 9.44297V10.0332H11.2729V9.44297L10.0862 8.2626V5.01658ZM6.22974 11.8037C6.28907 11.8037 6.40773 11.8037 6.46706 11.8037C6.88238 11.7447 7.17903 11.4496 7.29769 11.0955C7.35702 10.9774 7.41635 10.8004 7.41635 10.6233H5.04312C5.04312 11.2725 5.5771 11.8037 6.22974 11.8037Z" fill="#4F4F4F"/>
 </svg>
@@ -158,14 +160,14 @@
                 </div>
                 <ul class="vacancy-display__list" id="example-1">
                   <li class="vacancy-display-list-item" v-for="item in items.slice(0, 5)"><span class="vacancy-display-list-item__letter">{{ item.letter }}</span><span class="vacancy-display-list-item__info"><span class="vacancy-display-list-item__title">{{ item.name }} </span><span class="vacancy-display-list-item__links"><a href="javascript:void(0);">{{ item.candidates }}<span>кандидата</span></a><a href="javascript:void(0);">{{ item.resumes }} <span>анкет</span></a></span></span></li>
-                </ul><a class="vacancy-display__show-all" href="javascript:void(0);"><span>ещё </span><span class="show-number">2</span>вакансии</a><a class="dflt-bttn" href="/active&amp;archive.html">Смотреть остальные вакансии</a>
+                </ul><a class="vacancy-display__show-all" href="list.html"><span>ещё </span><span class="show-number">2</span>вакансии</a><a class="dflt-bttn" href="active&archive.html">Смотреть остальные вакансии</a>
               </div>
             </aside>
           </div>
           <div class="col-xl-9 col-lg-8">
             <div class="important">
               <h2 class="important__title">Важное</h2>
-              <div class="important-slider owl-carousel owl-theme"><a class="important-slider-item important-slider-item_1" href="javascript:void(0);" style="width: 260px; background-image: url('image/important-slider-item-bg-1-2.png'), url('image/important-slider-item-bg-1-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+14</span><span class="important-slider-item__title">Приступили к тестовому заданию</span></span></a><a class="important-slider-item important-slider-item_1" href="javascript:void(0);" style="width: 163px; background-image: url('image/important-slider-item-bg-2-2.png'), url('image/important-slider-item-bg-2-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+5</span><span class="important-slider-item__title">Новые результаты тестирования</span></span></a><a class="important-slider-item important-slider-item_1" href="javascript:void(0);" style="width: 163px; background-image: url('image/important-slider-item-bg-3-2.png'), url('image/important-slider-item-bg-3-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+6</span><span class="important-slider-item__title">Назначено встреч с кандидатами</span></span></a><a class="important-slider-item important-slider-item_1" href="javascript:void(0);" style="width: 163px; background-image: url('image/important-slider-item-bg-4-2.png'), url('image/important-slider-item-bg-4-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+8</span><span class="important-slider-item__title">Новые результаты видео-тестов</span></span></a><a class="important-slider-item important-slider-item_1" href="javascript:void(0);" style="width: 260px; background-image: url('image/important-slider-item-bg-1-2.png'), url('image/important-slider-item-bg-1-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+14</span><span class="important-slider-item__title">Приступили к тестовому заданию</span></span></a><a class="important-slider-item important-slider-item_1" href="javascript:void(0);" style="width: 163px; background-image: url('image/important-slider-item-bg-2-2.png'), url('image/important-slider-item-bg-2-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+5</span><span class="important-slider-item__title">Новые результаты тестирования</span></span></a><a class="important-slider-item important-slider-item_1" href="javascript:void(0);" style="width: 163px; background-image: url('image/important-slider-item-bg-3-2.png'), url('image/important-slider-item-bg-3-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+6</span><span class="important-slider-item__title">Назначено встреч с кандидатами</span></span></a><a class="important-slider-item important-slider-item_1" href="javascript:void(0);" style="width: 163px; background-image: url('image/important-slider-item-bg-4-2.png'), url('image/important-slider-item-bg-4-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+8</span><span class="important-slider-item__title">Новые результаты видео-тестов</span></span></a></div>
+              <div class="important-slider owl-carousel owl-theme"><a class="important-slider-item important-slider-item_1" href="vacancy-schedule.html" style="width: 260px; background-image: url('image/important-slider-item-bg-1-2.png'), url('image/important-slider-item-bg-1-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+14</span><span class="important-slider-item__title">Приступили к тестовому заданию</span></span></a><a class="important-slider-item important-slider-item_1" href="vacancy-schedule.html" style="width: 163px; background-image: url('image/important-slider-item-bg-2-2.png'), url('image/important-slider-item-bg-2-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+5</span><span class="important-slider-item__title">Новые результаты тестирования</span></span></a><a class="important-slider-item important-slider-item_1" href="vacancy-schedule.html" style="width: 163px; background-image: url('image/important-slider-item-bg-3-2.png'), url('image/important-slider-item-bg-3-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+6</span><span class="important-slider-item__title">Назначено встреч с кандидатами</span></span></a><a class="important-slider-item important-slider-item_1" href="vacancy-schedule.html" style="width: 163px; background-image: url('image/important-slider-item-bg-4-2.png'), url('image/important-slider-item-bg-4-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+8</span><span class="important-slider-item__title">Новые результаты видео-тестов</span></span></a><a class="important-slider-item important-slider-item_1" href="vacancy-schedule.html" style="width: 260px; background-image: url('image/important-slider-item-bg-1-2.png'), url('image/important-slider-item-bg-1-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+14</span><span class="important-slider-item__title">Приступили к тестовому заданию</span></span></a><a class="important-slider-item important-slider-item_1" href="vacancy-schedule.html" style="width: 163px; background-image: url('image/important-slider-item-bg-2-2.png'), url('image/important-slider-item-bg-2-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+5</span><span class="important-slider-item__title">Новые результаты тестирования</span></span></a><a class="important-slider-item important-slider-item_1" href="vacancy-schedule.html" style="width: 163px; background-image: url('image/important-slider-item-bg-3-2.png'), url('image/important-slider-item-bg-3-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+6</span><span class="important-slider-item__title">Назначено встреч с кандидатами</span></span></a><a class="important-slider-item important-slider-item_1" href="vacancy-schedule.html" style="width: 163px; background-image: url('image/important-slider-item-bg-4-2.png'), url('image/important-slider-item-bg-4-1.jpg')"><span class="important-slider-item__info"><span class="important-slider-item__count">+8</span><span class="important-slider-item__title">Новые результаты видео-тестов</span></span></a></div>
             </div>
             <div class="actions">
               <h3 class="actions__title">Действия<span><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,19 +176,19 @@
               <div class="actions-slider">
                 <div class="actions-slider-item">
                   <div class="actions-slider-item__icon" data-count="1000"><img src="image/actions-slider-item-icon-1.svg" alt="#"></div>
-                  <div class="actions-slider-item__info"><span class="actions-slider-item__title">Резюме</span><span class="actions-slider-item__text">Получить новый пакет резюме.<br>Доступно 1000 шт.</span><a class="dflt-bttn" href="javascript:void(0);">Получить</a></div>
+                  <div class="actions-slider-item__info"><span class="actions-slider-item__title">Резюме</span><span class="actions-slider-item__text">Получить новый пакет резюме.<br>Доступно 1000 шт.</span><a class="dflt-bttn" href="vacancy-actions.html">Получить</a></div>
                 </div>
                 <div class="actions-slider-item">
                   <div class="actions-slider-item__icon" data-count="420"><img src="image/actions-slider-item-icon-2.svg" alt="#"></div>
-                  <div class="actions-slider-item__info"><span class="actions-slider-item__title">Кандидаты</span><span class="actions-slider-item__text">Провести процесс привлечения кандидатов.<br>Доступно 420 шт.</span><a class="dflt-bttn" href="javascript:void(0);">Получить</a></div>
+                  <div class="actions-slider-item__info"><span class="actions-slider-item__title">Кандидаты</span><span class="actions-slider-item__text">Провести процесс привлечения кандидатов.<br>Доступно 420 шт.</span><a class="dflt-bttn" href="vacancy-actions.html">Получить</a></div>
                 </div>
                 <div class="actions-slider-item">
                   <div class="actions-slider-item__icon" data-count="2"><img src="image/actions-slider-item-icon-3.svg" alt="#"></div>
-                  <div class="actions-slider-item__info"><span class="actions-slider-item__title">Тестирование</span><span class="actions-slider-item__text">Тестирование кандидата на псих. и проф. критерии.<br>Доступно 2 шт.</span><a class="dflt-bttn" href="javascript:void(0);">Получить</a></div>
+                  <div class="actions-slider-item__info"><span class="actions-slider-item__title">Тестирование</span><span class="actions-slider-item__text">Тестирование кандидата на псих. и проф. критерии.<br>Доступно 2 шт.</span><a class="dflt-bttn" href="vacancy-actions.html">Получить</a></div>
                 </div>
                 <div class="actions-slider-item">
                   <div class="actions-slider-item__icon" data-count="12"><img src="image/actions-slider-item-icon-4.svg" alt="#"></div>
-                  <div class="actions-slider-item__info"><span class="actions-slider-item__title">Видео-интервью</span><span class="actions-slider-item__text">Автоматическое тестирование человека.<br>Доступно 12 шт.</span><a class="dflt-bttn" href="javascript:void(0);">Получить</a></div>
+                  <div class="actions-slider-item__info"><span class="actions-slider-item__title">Видео-интервью</span><span class="actions-slider-item__text">Автоматическое тестирование человека.<br>Доступно 12 шт.</span><a class="dflt-bttn" href="vacancy-actions.html">Получить</a></div>
                 </div>
               </div>
             </div>
