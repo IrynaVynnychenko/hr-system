@@ -79,7 +79,7 @@ gulp.task("scripts", function () {
       "node_modules/flatpickr/dist/l10n/ru.js",
       "node_modules/vue/dist/vue.min.js",
       "node_modules/vue-multiselect/dist/vue-multiselect.min.js",
-      "node_modules/vanilla-js-dropdown/vanilla-js-dropdown.js",
+      "node_modules/vanilla-js-dropdown/src/vanilla-js-dropdown.js",
       "./src/js/common.min.js",
     ])
     .pipe(concat("main.js"))
