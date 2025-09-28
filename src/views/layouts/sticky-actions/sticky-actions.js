@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.pageYOffset ||
       document.documentElement.scrollTop ||
       document.body.scrollTop;
-    console.log(`scrollPos ${scrollPos}`);
+    // console.log(`scrollPos ${scrollPos}`); // Removed to prevent console spam
     sections.forEach((section) => {
       var currLink = section;
       var val = currLink.getAttribute("href");

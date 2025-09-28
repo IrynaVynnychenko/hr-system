@@ -15,7 +15,7 @@ $(document).ready(function () {
     groupSeparator: " ",
   });
 
-  $(".dflt-input_phone").inputmask("+7 (999) 999-99-99");
+  $(".dflt-input_phone").inputmask("+8 (999) 999-99-99");
 
   $(".dflt-input_code").inputmask("999999", {
     placeholder: "",
@@ -35,10 +35,13 @@ $(document).ready(function () {
   });
   $(".scrolling__link").on("click", function (event) {
     event.preventDefault();
-    var id = $(this).attr("href"),
-      top = $(id).offset().top;
-
-    $("body,html").animate({ scrollTop: top }, 1000);
+    var id = $(this).attr("href");
+    var targetElement = $(id);
+    
+    if (targetElement.length > 0) {
+      var top = targetElement.offset().top;
+      $("body,html").animate({ scrollTop: top }, 1000);
+    }
   });
 
   var clicked = false,

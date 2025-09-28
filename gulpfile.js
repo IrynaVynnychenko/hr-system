@@ -1,6 +1,6 @@
 // подключение галп плагинов
 var gulp = require("gulp"),
-  sass = require("gulp-sass"),
+  sass = require("gulp-sass")(require("sass")),
   browserSync = require("browser-sync"),
   autoprefixer = require("gulp-autoprefixer"),
   minifyCss = require("gulp-clean-css"),
@@ -79,6 +79,7 @@ gulp.task("scripts", function () {
       "node_modules/flatpickr/dist/l10n/ru.js",
       "node_modules/vue/dist/vue.min.js",
       "node_modules/vue-multiselect/dist/vue-multiselect.min.js",
+      "node_modules/vanilla-js-dropdown/vanilla-js-dropdown.js",
       "./src/js/common.min.js",
     ])
     .pipe(concat("main.js"))

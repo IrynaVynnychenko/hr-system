@@ -15,7 +15,7 @@ $(document).ready(function () {
     groupSeparator: " ",
   });
 
-  $(".dflt-input_phone").inputmask("+7 (999) 999-99-99");
+  $(".dflt-input_phone").inputmask("+8 (999) 999-99-99");
 
   $(".dflt-input_code").inputmask("999999", {
     placeholder: "",
@@ -35,10 +35,13 @@ $(document).ready(function () {
   });
   $(".scrolling__link").on("click", function (event) {
     event.preventDefault();
-    var id = $(this).attr("href"),
-      top = $(id).offset().top + 92;
-
-    $("body,html").animate({ scrollTop: top }, 1000);
+    var id = $(this).attr("href");
+    var targetElement = $(id);
+    
+    if (targetElement.length > 0) {
+      var top = targetElement.offset().top + 92;
+      $("body,html").animate({ scrollTop: top }, 1000);
+    }
   });
 
   var clicked = false,
@@ -132,6 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener("click", closeAllSelect);
+
+  // Initialize CustomSelect for new-account__dropdown elements
+  var newAccountDropdowns = document.querySelectorAll('.new-account__dropdown select');
+  newAccountDropdowns.forEach(function(select) {
+    new CustomSelect({
+      elem: select
+    });
+  });
 
   if (document.querySelector("#example-1")) {
     var example1 = new Vue({
